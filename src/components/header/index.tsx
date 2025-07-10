@@ -62,7 +62,8 @@ const Header = () => {
                     style={{
                          filter: "blur(150px)",
                     }}
-               /><div
+               />
+               <div
                     className="absolute w-[460px] h-[460px] -right-[105px] -top-[132px] bg-[#007dfc] opacity-20 blur-[150px]"
                     style={{
                          filter: "blur(150px)",
