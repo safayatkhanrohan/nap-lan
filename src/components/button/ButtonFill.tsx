@@ -40,7 +40,7 @@ const ButtonFill: React.FC<ButtonFillProps> = ({
         ${className}
         ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
       `}>
-               {btnText && <span className="text-white text-sm font-medium">{btnText}</span>}
+               {btnText && <span className="text-white font-medium">{btnText}</span>}
           </button>
      );
 };

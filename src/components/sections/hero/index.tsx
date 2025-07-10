@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { backOut, easeInOut, motion } from "framer-motion";
 import ButtonFill from "../../button/ButtonFill";
 import ButtonOutline from "../../button/ButtonOutline";
 import heroAnim from "../../../assets/animation/hero-anim.gif";
+import ButtonCircle from "../../button/ButtonCircle";
 
 const Hero = () => {
      const containerVariants = {
@@ -32,7 +33,7 @@ const Hero = () => {
                opacity: 1,
                transition: {
                     duration: 0.8,
-                    ease: "easeInOut",
+                    ease: easeInOut,
                },
           },
      };
@@ -44,7 +45,7 @@ const Hero = () => {
                opacity: 1,
                transition: {
                     duration: 0.5,
-                    ease: "backOut",
+                    ease: backOut,
                },
           },
      };
@@ -52,7 +53,7 @@ const Hero = () => {
      return (
           <div className="container mx-auto px-4">
                <motion.section
-                    className="max-w-6xl h-auto md:h-[665px] mt-[50px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                    className="max-w-7xl h-auto md:h-[665px] mt-[50px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}>
@@ -83,14 +84,21 @@ const Hero = () => {
                                    Year 3, 5, 7 & 9 students to excel in NAPLAN.
                               </p>
                          </motion.div>
-                         <motion.div className="flex gap-3 mt-2" variants={buttonVariants}>
-                              <ButtonFill
-                                   onClick={() => console.log("Button clicked!")}
-                                   className="bg-blue-500 text-white rounded-full"
-                                   btnText="Try Free Trial"
-                                   type="button"
-                              />
-                              <ButtonOutline btnText="See Sample Test" className="py-1.5" />
+                         <motion.div className="flex gap-2">
+                              <motion.div className="flex gap-1" variants={buttonVariants}>
+                                   <ButtonFill
+                                        onClick={() => console.log("Button clicked!")}
+                                        className="bg-blue-500 text-white rounded-full"
+                                        btnText="Try Free Trial"
+                                        type="button"
+                                   />
+                                   <ButtonCircle />
+                              </motion.div>
+
+                              <motion.div className="flex gap-1" variants={buttonVariants}>
+                                   <ButtonOutline btnText="See Sample Test" className="py-1.5" />
+                                   <ButtonCircle />
+                              </motion.div>
                          </motion.div>
                     </motion.div>
 
@@ -103,22 +111,28 @@ const Hero = () => {
                               <motion.img
                                    src="/images/hero-img.png"
                                    alt="Happy student learning"
-                                   className="h-[90%] mx-auto relative z-10"
+                                   className="h-[85%] mx-auto relative z-10"
                                    variants={imageVariants}
                               />
 
                               {/* Animated Background - scaled to 75% */}
                               <motion.div
-                                   className="absolute bottom-[-20px] right-0 justify-center z-0"
+                                   className="absolute bottom-[-20px] left-[70px] justify-center z-0"
                                    variants={itemVariants}>
                                    <img
                                         src={heroAnim}
                                         alt="Animated background"
-                                        className="w-[80%] h-[80%] object-contain"
+                                        className="w-[85%] h-[85%] object-contain"
                                    />
                               </motion.div>
                          </div>
                     </motion.div>
+                    <div
+                         className="absolute w-[570px] h-[570px] left-[600px] top-[230px] bg-[#2AF595] opacity-20 blur-[150px] z-100"
+                         style={{
+                              filter: "blur(400px)",
+                         }}
+                    />
                </motion.section>
           </div>
      );
