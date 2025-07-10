@@ -19,3 +19,28 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_PAT }}
+
+      - name: Build Docker image
+        run: |
+          docker build -t ghcr.io/${{ github.repository }}:latest .
+
+      - name: Push Docker image to GHCR
+        run: |
+          docker push ghcr.io/${{ github.repository }}:latest
+
+      - name: SSH to VPS and deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /var/www/nap-lan
+            docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GHCR_PAT }}
+            docker pull ghcr.io/${{ github.repository }}:latest
+            docker stop nap-lan-frontend-1 || true
+            docker rm nap-lan-frontend-1 || true
+            docker run -d \
+              --name nap-lan-frontend-1 \
+              -p 5500:80 \
+              ghcr.io/${{ github.repository }}:latest
