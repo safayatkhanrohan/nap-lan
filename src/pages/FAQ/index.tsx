@@ -1,6 +1,6 @@
 const FAQ = () => {
   return (
-    <div>FAQ</div>
+    <div className="text-center">FAQ</div>
   )
 }
 
