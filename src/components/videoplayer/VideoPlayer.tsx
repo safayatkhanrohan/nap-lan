@@ -197,7 +197,7 @@ const VideoPlayer = () => {
                          <span>Defferent Subjects</span>
                     </div>
                </div>
-               <div className="w-[220px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute bottom-24 -left-0 -translate-x-1/2 bg-white z-10">
+               <div className="w-[270px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute bottom-24 -left-0 -translate-x-1/2 bg-white z-10">
                     <div className="relative h-full w-full flex items-center gap-4 justify-center">
                          <div
                               className="w-[60px] h-[60px]
