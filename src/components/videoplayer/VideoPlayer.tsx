@@ -239,7 +239,7 @@ const VideoPlayer = () => {
                          </div>
 
                          {/* Controls overlay */}
-                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                         <div className="absolute bottom-0 left-0 z-20 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                               {/* Progress bar */}
                               <div className="flex items-center mb-3">
                                    <input
