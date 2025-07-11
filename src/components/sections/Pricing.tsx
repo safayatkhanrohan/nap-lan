@@ -1,9 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-/* eslint-disable */
+
 import "swiper/css";
 import "swiper/css/pagination";
-/* eslint-enable */
 import PricingCard from "../pricing/PricingCard";
 
 const Pricing = () => {
