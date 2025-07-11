@@ -1,4 +1,4 @@
-import VideoPlayer from "../../videoplayer/VideoPlayer";
+import VideoPlayer from "../videoplayer/VideoPlayer";
 
 function VideoIntro() {
     return (

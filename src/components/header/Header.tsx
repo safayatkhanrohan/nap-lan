@@ -2,7 +2,7 @@ import { ChevronDown, Mail, Phone, Search, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ButtonOutline from "../button/ButtonOutline";
 import ButtonCircle from "../button/ButtonCircle";
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
      const [showSearchInput, setShowSearchInput] = useState(false);

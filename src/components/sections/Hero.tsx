@@ -1,8 +1,8 @@
 import { backOut, easeInOut, motion } from "framer-motion";
-import ButtonFill from "../../button/ButtonFill";
-import ButtonOutline from "../../button/ButtonOutline";
-import heroAnim from "../../../assets/animation/hero-anim.gif";
-import ButtonCircle from "../../button/ButtonCircle";
+import ButtonFill from "../button/ButtonFill";
+import ButtonOutline from "../button/ButtonOutline";
+import heroAnim from "../../assets/animation/hero-anim.gif";
+import ButtonCircle from "../button/ButtonCircle";
 
 const Hero = () => {
      const containerVariants = {
