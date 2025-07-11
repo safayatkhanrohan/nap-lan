@@ -70,7 +70,7 @@ const Pricing = () => {
                          their full potential for NAPLAN success.
                     </p>
                </div>
-               <div>
+               <div className="grid grid-cols-3 gap-8">
                     {pricingPlans.map((plan) => {
                          return (
                               <PricingCard

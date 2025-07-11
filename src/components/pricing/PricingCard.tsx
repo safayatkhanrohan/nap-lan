@@ -18,7 +18,7 @@ const PricingCard = ({
      color,
 }: PricingCardProps) => {
      return (
-          <div>
+          <div className="rounded-[20px] shadow-[0px_4px_17px_rgba(0,0,0,0.15)] p-6">
                <PricingHeader
                     imageSrc={imageSrc}
                     title={title}
