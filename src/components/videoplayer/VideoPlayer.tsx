@@ -186,8 +186,11 @@ const VideoPlayer = () => {
                     <img src={sparkleDown} alt="Sparkle Up" className="w-32 h-32" />
                </div>
 
-               <div className="w-[220px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute top-24 right-0 translate-x-1/2 bg-white z-10">
-                    <div className="absolute top-1 left-2 -translate-1/2 w-14 h-14 bg-[#ffa558] flex justify-center items-center shadow-md rounded-full">
+               <div className="w-[220px] h-[100px] rounded-[20px] flex justify-center items-center flex-col absolute shadow-2xl top-24 right-0 translate-x-1/2 bg-white z-10">
+                    <div
+                         className="absolute top-1 left-2 -translate-1/2 w-14 h-14 bg-[#ffa558] flex justify-center items-center shadow-md rounded-full
+                    "
+                         style={{ filter: "drop-shadow(0px 4px 33.5px rgba(4, 65, 36, 0.15))" }}>
                          <img src={bookIcon} alt="Book Icon" className="w-10 h-10" />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -195,7 +198,7 @@ const VideoPlayer = () => {
                          <span className="font-medium">Different Subjects</span>
                     </div>
                </div>
-               <div className="w-[270px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute bottom-24 -left-0 -translate-x-1/2 bg-white z-10">
+               <div className="w-[270px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-2xl absolute bottom-24 -left-0 -translate-x-1/2 bg-white z-10">
                     <div className="relative h-full w-full flex items-center gap-4 justify-center">
                          <div
                               className="w-[60px] h-[60px]
