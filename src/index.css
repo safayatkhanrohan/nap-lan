@@ -35,3 +35,8 @@ body {
     background: #E6700B;
     border-radius: 50%;
 }
+
+.swiper-wrapper {
+    align-items: center;
+    margin-bottom: 60px;
+}

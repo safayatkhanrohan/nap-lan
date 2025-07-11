@@ -1,3 +1,7 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import PricingCard from "../pricing/PricingCard";
 
 const Pricing = () => {
@@ -60,31 +64,42 @@ const Pricing = () => {
           },
      ];
      return (
-          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6">
+          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6 pb-[100px]">
                <div>
                     <h2 className="text-5xl font-bold text-center mb-4">
                          Simple & <span className="text-[#FF7777]">Transparent</span> Pricing
                     </h2>
                     <p className="text-center text-lg leading-[165%] text-[#222E48]/70 mb-8">
-                         Choose the plan that best fits your child's learning journey and <br /> unlock
-                         their full potential for NAPLAN success.
+                         Choose the plan that best fits your child's learning journey and <br />{" "}
+                         unlock their full potential for NAPLAN success.
                     </p>
                </div>
-               <div className="grid grid-cols-3 gap-8">
-                    {pricingPlans.map((plan) => {
-                         return (
-                              <PricingCard
-                                   key={plan.id}
-                                   color={plan.color}
-                                   title={plan.title}
-                                   price={plan.price}
-                                   billingCycle={plan.billingCycle}
-                                   includes={plan.includes}
-                                   imageSrc={plan.imgScr}
-                              />
-                         );
-                    })}
-               </div>
+
+               <Swiper
+                    modules={[Pagination]}
+                    spaceBetween={24}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    breakpoints={{
+                         640: { slidesPerView: 1 },
+                         768: { slidesPerView: 2 },
+                         1024: { slidesPerView: 3 },
+                    }}>
+                    {pricingPlans.map((plan) => (
+                         <SwiperSlide key={plan.id}>
+                              <div className="max-w-[95%] mx-auto">
+                                   <PricingCard
+                                        color={plan.color}
+                                        title={plan.title}
+                                        price={plan.price}
+                                        billingCycle={plan.billingCycle}
+                                        includes={plan.includes}
+                                        imageSrc={plan.imgScr}
+                                   />
+                              </div>
+                         </SwiperSlide>
+                    ))}
+               </Swiper>
           </div>
      );
 };
