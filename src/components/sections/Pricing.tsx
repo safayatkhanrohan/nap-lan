@@ -1,7 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+/* eslint-disable */
 import "swiper/css";
 import "swiper/css/pagination";
+/* eslint-enable */
 import PricingCard from "../pricing/PricingCard";
 
 const Pricing = () => {
@@ -64,7 +66,7 @@ const Pricing = () => {
           },
      ];
      return (
-          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6 pb-[100px]">
+          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6">
                <div>
                     <h2 className="text-5xl font-bold text-center mb-4">
                          Simple & <span className="text-[#FF7777]">Transparent</span> Pricing
