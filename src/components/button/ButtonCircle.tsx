@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
+import { cn } from "../../utils/utils";
 
 interface ButtonCircleProps {
      onClick?: () => void;
@@ -8,7 +9,7 @@ interface ButtonCircleProps {
 
 const ButtonCircle: React.FC<ButtonCircleProps> = ({ onClick, className = "" }) => {
      return (
-          <div className={`relative w-[46px] h-[46px] flex-none group ${className}`}>
+          <div className={cn("relative w-[46px] h-[46px] flex-none group", className)}>
                {/* Main circular button background with shadow effects */}
                <div className="absolute inset-0 rounded-full bg-[#007DFC] shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] transition-all duration-300 group-hover:bg-[#0066cc] group-active:bg-[#0052a3] group-hover:shadow-[inset_0px_-2px_4px_rgba(0,0,0,0.25),inset_0px_2px_4px_rgba(255,255,255,0.5)]" />
 

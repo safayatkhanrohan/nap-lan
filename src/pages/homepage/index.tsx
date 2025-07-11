@@ -1,4 +1,5 @@
 
+import Features from "../../components/sections/Features"
 import Hero from "../../components/sections/Hero"
 import HowItWorks from "../../components/sections/HowItWorks"
 import Pricing from "../../components/sections/Pricing"
@@ -13,6 +14,7 @@ const Home = () => {
         <ValueProposition />
         <Pricing />
         <HowItWorks />
+        <Features />
     </div>
   )
 }
