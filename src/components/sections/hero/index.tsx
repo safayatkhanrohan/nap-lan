@@ -59,7 +59,7 @@ const Hero = () => {
                     variants={containerVariants}>
                     {/* Left Section */}
                     <motion.div
-                         className="flex flex-col gap-4 md:gap-6 order-2 md:order-1"
+                         className="flex flex-col gap-4 md:gap-6 order-2 md:order-1 relative z-10"
                          variants={containerVariants}>
                          <motion.div
                               className="flex gap-3 items-center text-lg md:text-[20px] text-[#e6700b] font-medium"
@@ -128,7 +128,7 @@ const Hero = () => {
                          </div>
                     </motion.div>
                     <div
-                         className="absolute w-[570px] h-[570px] left-[600px] top-[230px] bg-[#2AF595] opacity-20 blur-[150px] z-100"
+                         className="absolute w-[570px] h-[570px] left-[600px] top-[230px] bg-[#2AF595] opacity-20 blur-[150px]"
                          style={{
                               filter: "blur(400px)",
                          }}
