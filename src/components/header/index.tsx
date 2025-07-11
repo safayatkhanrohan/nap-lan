@@ -55,7 +55,7 @@ const Header = () => {
      };
 
      return (
-          <header className="w-full flex flex-col items-center justify-between h-[210px]">
+          <header className="w-full flex flex-col items-center justify-between h-[210px] relative overflow-x-clip">
                 {/* Background gradient and blur effect */}
                <div
                     className="absolute w-[460px] h-[460px] -left-[105px] -top-[132px] bg-[#E6700B] opacity-20 blur-[150px]"
