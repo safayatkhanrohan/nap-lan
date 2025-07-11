@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import sparkleUp from "../../assets/icons/sparkle-up.png";
 import sparkleDown from "../../assets/icons/sparkle-down.png";
 import bookIcon from "../../assets/icons/book.png";
+import schoolIcon from "../../assets/icons/school.png";
 
 const VideoPlayer = () => {
      const [isPlaying, setIsPlaying] = useState(false);
@@ -191,15 +192,25 @@ const VideoPlayer = () => {
                               <img src={bookIcon} alt="Book Icon" className="w-10 h-10" />
                          </div>
                     </div>
-                    Hello
+                    <div className="text-center flex flex-col items-center justify-center">
+                         <span>210K</span>
+                         <span>Defferent Subjects</span>
+                    </div>
                </div>
                <div className="w-[220px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute bottom-24 -left-0 -translate-x-1/2 bg-white z-10">
-                    <div className="relative h-full w-full">
-                         <div className="absolute">
-                              <img src={bookIcon} alt="Book Icon" className="w-10 h-10" />
+                    <div className="relative h-full w-full flex items-center gap-4 justify-center">
+                         <div
+                              className="w-[60px] h-[60px]
+            bg-[#D9F49B]
+            shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)]
+            rounded-[8px] flex justify-center items-center">
+                              <img src={schoolIcon} alt="School Icon" className="w-10 h-10" />
+                         </div>
+                         <div className="flex flex-col justify-center">
+                              <span className="text-2xl text-[#e0b80b] font-bold">150K</span>
+                              <span className="font-medium">Experienced Tutor</span>
                          </div>
                     </div>
-                    Hello
                </div>
 
                <div
@@ -329,9 +340,7 @@ const VideoPlayer = () => {
                                         </div>
                                    </div>
                                    {/* Fullscreen button */}
-                                   <button
-                                        onClick={toggleFullscreen}
-                                        className="text-white">
+                                   <button onClick={toggleFullscreen} className="text-white">
                                         {isFullscreen ? (
                                              <svg
                                                   xmlns="http://www.w3.org/2000/svg"
