@@ -1,3 +1,5 @@
+import ButtonCircle from "../button/ButtonCircle";
+import ButtonFill from "../button/ButtonFill";
 import PricingHeader from "./PricingHeader";
 
 interface PricingCardProps {
@@ -26,13 +28,17 @@ const PricingCard = ({
                     billingCycle={billingCycle}
                     color={color}
                />
-               <div>
-                    <h3>Includes:</h3>
+               <div className="mt-6 p-2">
+                    <h3 className="font-semibold mb-4">Includes:</h3>
                     <ul>
                          {includes.map((item, index) => (
-                              <li key={index}>{item}</li>
+                              <li key={index} className="mb-6">{item}</li>
                          ))}
                     </ul>
+               </div>
+               <div className="flex gap-0.5">
+                    <ButtonFill btnText="Choose Sales" className="flex-1"/>
+                    <ButtonCircle />
                </div>
           </div>
      );
