@@ -187,9 +187,9 @@ const VideoPlayer = () => {
                </div>
 
                <div className="w-[220px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute top-24 right-0 translate-x-1/2 bg-white z-10">
-                         <div className="absolute top-1 left-2 -translate-1/2 w-14 h-14 bg-[#ffa558] flex justify-center items-center shadow-md rounded-full">
-                              <img src={bookIcon} alt="Book Icon" className="w-10 h-10" />
-                         </div>
+                    <div className="absolute top-1 left-2 -translate-1/2 w-14 h-14 bg-[#ffa558] flex justify-center items-center shadow-md rounded-full">
+                         <img src={bookIcon} alt="Book Icon" className="w-10 h-10" />
+                    </div>
                     <div className="flex flex-col justify-center">
                          <span className="text-2xl font-bold text-[#1aa246]">210K</span>
                          <span className="font-medium">Different Subjects</span>
@@ -220,7 +220,7 @@ const VideoPlayer = () => {
                               <video
                                    ref={videoRef}
                                    className="w-full h-full object-cover"
-                                   poster="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80">
+                                   poster="/images/intro-thumbnail.png">
                                    <source src="/videos/intro.mp4" type="video/mp4" />
                                    Your browser does not support the video tag.
                               </video>
