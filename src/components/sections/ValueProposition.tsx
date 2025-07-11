@@ -3,15 +3,15 @@ import ButtonFill from "../button/ButtonFill";
 
 const ValueProposition = () => {
      return (
-          <section className="grid grid-cols-5 max-w-[1440px] mx-auto px-6 py-12 mt-[100px] gap-8">
-               <div className="col-span-2 flex justify-center">
+          <section className="grid grid-cols-12 max-w-[1280px] mx-auto px-6 py-12 mt-[100px] gap-8">
+               <div className="col-span-5 flex justify-center">
                     <img
                          src="/images/value-img.png"
                          alt="Value Proposition"
                          className="w-full h-auto"
                     />
                </div>
-               <div className="col-span-2 flex items-center justify-end ml-4">
+               <div className="col-span-5 flex items-center justify-end ml-4">
                     <div>
                          <h2 className="text-5xl font-bold leading-[130%] mb-4">
                               <span className="text-[#FF7777]">Reports that show</span> <br /> your
@@ -36,7 +36,7 @@ const ValueProposition = () => {
                          </div>
                     </div>
                </div>
-               <div className="flex items-end">
+               <div className="flex items-end col-span-2">
                     <img
                          src="/images/value-img-2.png"
                          alt="Value Proposition 2"

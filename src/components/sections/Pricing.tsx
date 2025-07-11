@@ -60,11 +60,13 @@ const Pricing = () => {
           },
      ];
      return (
-          <div>
+          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6">
                <div>
-                    <h2>Simple & Transparent Pricing</h2>
-                    <p>
-                         Choose the plan that best fits your child's learning journey and unlock
+                    <h2 className="text-5xl font-bold text-center mb-4">
+                         Simple & <span className="text-[#FF7777]">Transparent</span> Pricing
+                    </h2>
+                    <p className="text-center text-lg leading-[165%] text-[#222E48]/70 mb-8">
+                         Choose the plan that best fits your child's learning journey and <br /> unlock
                          their full potential for NAPLAN success.
                     </p>
                </div>
