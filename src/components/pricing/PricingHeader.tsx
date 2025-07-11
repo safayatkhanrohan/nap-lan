@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 interface PricingHeaderProps {
      imageSrc: string;
      title: string;
@@ -9,7 +8,7 @@ interface PricingHeaderProps {
 
 const PricingHeader = ({ imageSrc, title, price, billingCycle, color }: PricingHeaderProps) => {
      return (
-          <div>
+          <div className={`bg-[${color}] text-white`}>
                <img src={imageSrc} alt={title} />
                <h2>{title}</h2>
                <p>{price}</p>

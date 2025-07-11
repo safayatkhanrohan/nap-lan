@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import PricingHeader from "./PricingHeader";
 
 interface PricingCardProps {
@@ -17,7 +16,6 @@ const PricingCard = ({
      billingCycle,
      includes,
      color,
-     className,
 }: PricingCardProps) => {
      return (
           <div>
