@@ -187,14 +187,12 @@ const VideoPlayer = () => {
                </div>
 
                <div className="w-[220px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute top-24 right-0 translate-x-1/2 bg-white z-10">
-                    <div className="relative h-full w-full">
                          <div className="absolute top-1 left-2 -translate-1/2 w-14 h-14 bg-[#ffa558] flex justify-center items-center shadow-md rounded-full">
                               <img src={bookIcon} alt="Book Icon" className="w-10 h-10" />
                          </div>
-                    </div>
-                    <div className="text-center flex flex-col items-center justify-center">
-                         <span>210K</span>
-                         <span>Defferent Subjects</span>
+                    <div className="flex flex-col justify-center">
+                         <span className="text-2xl font-bold text-[#1aa246]">210K</span>
+                         <span className="font-medium">Different Subjects</span>
                     </div>
                </div>
                <div className="w-[270px] h-[100px] rounded-[20px] flex justify-center items-center flex-col shadow-lg absolute bottom-24 -left-0 -translate-x-1/2 bg-white z-10">
