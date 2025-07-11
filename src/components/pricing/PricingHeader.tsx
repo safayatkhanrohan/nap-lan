@@ -7,7 +7,6 @@ interface PricingHeaderProps {
 }
 
 const PricingHeader = ({ imageSrc, title, price, billingCycle, color }: PricingHeaderProps) => {
-     console.log("PricingHeader rendered with color:", color);
      
      return (
           <div style={{backgroundColor: color}}>

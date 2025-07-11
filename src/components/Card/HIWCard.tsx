@@ -6,7 +6,7 @@ interface HIWCardProps {
 
 const HIWCard = ({ imageSrc, title, description }: HIWCardProps) => {
      return (
-          <div>
+          <div className="border">
                <img src={imageSrc} alt={title} />
                <h3>{title}</h3>
                <p>{description}</p>

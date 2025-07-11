@@ -28,7 +28,7 @@ const HowItWorks = () => {
           },
      ];
      return (
-          <div className="max-w-7xl bg-[url('/images/hiw-banner.png')] bg-cover bg-center mx-auto p-8 text-white relative">
+          <div className="max-w-7xl bg-[url('/images/hiw-banner.png')] bg-cover bg-center mx-auto p-8relative">
                <h2>How it works</h2>
                <p>Find out in 5 steps</p>
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
