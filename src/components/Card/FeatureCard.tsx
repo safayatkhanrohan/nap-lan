@@ -30,13 +30,12 @@ const FeatureCard = ({
                <div className="absolute inset-0" style={{ background: bgColor, opacity: 0.84 }} />
                {/* Background Image */}
                <img
-                    src={bgSrc}
-                    alt={title}
+                    src={bgSrc} alt ="Feature Background"
                     className="absolute inset-0 w-full h-full object-cover"
                />
 
                {/* Icon */}
-               <img src={iconSrc} alt={title} className="absolute bottom-0 right-0 h-[300px]" />
+               <img src={iconSrc} alt ="Feature Icon" className="absolute bottom-0 right-0 h-[300px]" />
 
                {/* Foreground Content */}
                <div className="relative z-10 p-6 flex flex-col gap-4 justify-center h-full">
