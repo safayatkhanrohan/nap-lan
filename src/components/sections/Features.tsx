@@ -16,11 +16,7 @@ const Features = () => {
                iconSrc: "/images/features/icons/1.png",
                bgSrc: "/images/features/bg.png",
                bgColor: "linear-gradient(287.99deg, #FFDD5D 0.63%, #FFF1C5 99.17%)",
-               btnColor: {
-                    bg: "#A15BA8",
-                    hover: "#8A4D8F",
-                    active: "#733F7A",
-               },
+               btnVariant: "violet",
           },
           {
                title: (
@@ -36,11 +32,7 @@ const Features = () => {
                iconSrc: "/images/features/icons/2.png",
                bgSrc: "/images/features/bg.png",
                bgColor: "linear-gradient(287.99deg, #126AC3 0.63%, #7EBDFE 99.17%)",
-               btnColor: {
-                    bg: "#A4C752",
-                    hover: "#8DAF3A",
-                    active: "#7A9B2A",
-               },
+               btnVariant: "green",
           },
           {
                title: (
@@ -56,11 +48,7 @@ const Features = () => {
                iconSrc: "/images/features/icons/3.png",
                bgSrc: "/images/features/bg.png",
                bgColor: "linear-gradient(287.99deg, #91C75B 0.63%, #DAFBB9 99.17%)",
-               btnColor: {
-                    bg: "#E6700B",
-                    hover: "#C65A0A",
-                    active: "#A54B08",
-               },
+               btnVariant: "orange",
           },
           {
                title: (
@@ -76,11 +64,7 @@ const Features = () => {
                iconSrc: "/images/features/icons/4.png",
                bgSrc: "/images/features/bg.png",
                bgColor: "linear-gradient(287.99deg, #331B4E 0.63%, #C99DFE 99.17%)",
-               btnColor: {
-                    bg: "#FFAA29E",
-                    hover: "#D88A8F",
-                    active: "#B76B72",
-               },
+               btnVariant: "yellow",
           },
      ];
 
@@ -94,7 +78,7 @@ const Features = () => {
                          iconSrc={feature.iconSrc}
                          bgSrc={feature.bgSrc}
                          bgColor={feature.bgColor}
-                         btnColor={feature.btnColor}
+                         btnVariant={feature.btnVariant}
                     />
                ))}
           </div>
