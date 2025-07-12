@@ -2,7 +2,7 @@ import { backOut, easeInOut, motion } from "framer-motion";
 import ButtonFill from "../button/ButtonFill";
 import ButtonOutline from "../button/ButtonOutline";
 import ButtonCircle from "../button/ButtonCircle";
-import heroAnim from "../../assets/animation/hero-anim2.webp";
+// import heroAnim from "../../assets/animation/hero-anim2.webp";
 
 const Hero = () => {
      const containerVariants = {
@@ -26,7 +26,7 @@ const Hero = () => {
                },
           },
      };
-     
+
      const imageVariants = {
           hidden: { scale: 0.9, opacity: 0, rotate: 2 },
           visible: {
@@ -138,7 +138,7 @@ const Hero = () => {
                                    className="h-full w-full object-cover rounded-lg"
                               />
                               <img
-                                   src={heroAnim}
+                                   src="https://res.cloudinary.com/dghzuk2uk/image/upload/v1752362661/br-uploads/klo5hvdnj4kfccwqhkxo.webp"
                                    alt="Animated background"
                                    className="absolute w-full -bottom-16 sm:-bottom-20 md:-bottom-[82px] -z-5"
                               />
