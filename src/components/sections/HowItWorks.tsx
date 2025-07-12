@@ -49,10 +49,10 @@ const HowItWorks = () => {
                     alt="How It Works Banner"
                     className="h-full w-auto absolute top-0 left-36 opacity-20 -z-10"
                />
-               <h2 className="text-5xl font-bold mb-5">
+               <h2 className="text-5xl font-bold mb-5 -ml-[30px]">
                     How it <span className="text-[#FF7777]">works</span>
                </h2>
-               <p className="text-[#222E48]/70 mb-5">Find out in 5 steps</p>
+               <p className="text-[#222E48]/70 mb-5 -ml-[30px]">Find out in 5 steps</p>
                <div className="flex gap-8 justify-between h-full">
                     {steps.map((step) => (
                          <HIWCard
