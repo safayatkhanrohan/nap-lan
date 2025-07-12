@@ -4,6 +4,7 @@
 :root {
     color: #222E48;
 }
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -40,4 +41,3 @@ body {
     align-items: center;
     margin-bottom: 60px;
 }
-@source inline('{hover:,}bg-red-{50,100,200,300,400,500}');

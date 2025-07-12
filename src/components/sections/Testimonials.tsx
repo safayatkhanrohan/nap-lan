@@ -1,3 +1,7 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
 import TestimonialCard from "../Card/TestimonialCard";
 
 const Testimonials = () => {
@@ -17,7 +21,7 @@ const Testimonials = () => {
                authorImage: "/images/author.png",
           },
           {
-               id: 3,
+               id: 3.5,
                author: "John Doe",
                content: "An essential tool for every parent. Highly recommend!",
                rating: 5,
@@ -38,18 +42,42 @@ const Testimonials = () => {
                authorImage: "/images/author.png",
           },
      ];
+
      return (
-          <div>
-               <h1>What parents are saying</h1>
-               {testimonials.map((testimonial) => (
-                    <TestimonialCard
-                         key={testimonial.id}
-                         author={testimonial.author}
-                         content={testimonial.content}
-                         rating={testimonial.rating}
-                         authorImage={testimonial.authorImage}
-                    />
-               ))}
+          <div className="max-w-7xl mx-auto px-4 py-6 mt-10">
+               <h2 className="text-center text-5xl font-bold mb-8 capitalize">
+                    What parents <span className="text-[#FF7777]">are saying</span>
+               </h2>
+               <div className="testimonials py-6">
+                    <Swiper
+                         modules={[Autoplay]}
+                         autoplay={{
+                              delay: 3000,
+                              disableOnInteraction: false,
+                         }}
+                         loop={true}
+                         spaceBetween={24}
+                         slidesPerView={1}
+                         breakpoints={{
+                              640: { slidesPerView: 1 },
+                              768: { slidesPerView: 2 },
+                              1280: { slidesPerView: 3 },
+                         }}
+                    >
+                         {testimonials.map((testimonial) => (
+                              <SwiperSlide key={testimonial.id}>
+                                   <div className="max-w-[95%] mx-auto h-full">
+                                        <TestimonialCard
+                                             author={testimonial.author}
+                                             content={testimonial.content}
+                                             rating={testimonial.rating}
+                                             authorImage={testimonial.authorImage}
+                                        />
+                                   </div>
+                              </SwiperSlide>
+                         ))}
+                    </Swiper>
+               </div>
           </div>
      );
 };
