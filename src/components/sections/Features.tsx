@@ -1,7 +1,18 @@
 import FeatureCard from "../Card/FeatureCard";
 
+type ButtonVariant = "violet" | "green" | "orange" | "yellow";
+
+interface Feature {
+     title: React.ReactNode;
+     description: React.ReactNode;
+     iconSrc: string;
+     bgSrc: string;
+     bgColor: string;
+     btnVariant: ButtonVariant;
+}
+
 const Features = () => {
-     const features = [
+     const features: Feature[] = [
           {
                title: (
                     <>
