@@ -44,7 +44,7 @@ const Testimonials = () => {
      ];
 
      return (
-          <div className="max-w-7xl mx-auto px-4 py-6 mt-10">
+          <div className="max-w-7xl mx-auto px-4 py-6 mt-10 mb-20">
                <h2 className="text-center text-5xl font-bold mb-8 capitalize">
                     What parents <span className="text-[#FF7777]">are saying</span>
                </h2>
