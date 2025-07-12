@@ -8,9 +8,22 @@ interface FeatureCardProps {
      iconSrc: string;
      bgSrc: string; // image path
      bgColor: string; // linear-gradient string
+     btnColor: {
+          bg: string; // background color for button
+          hover: string; // hover color for button
+          active: string; // active color for button
+     }; //
 }
 
-const FeatureCard = ({ title, description, iconSrc, bgSrc, bgColor }: FeatureCardProps) => {
+const FeatureCard = ({
+     title,
+     description,
+     iconSrc,
+     bgSrc,
+     bgColor,
+     btnColor,
+}: FeatureCardProps) => {
+     const btnClass = `bg-[${btnColor.bg}] hover:bg-[${btnColor.hover}] active:bg-[${btnColor.active}] px-14`;
      return (
           <div className="relative h-[369px] rounded-[20px] shadow-lg overflow-hidden">
                {/* Gradient Overlay */}
@@ -33,7 +46,7 @@ const FeatureCard = ({ title, description, iconSrc, bgSrc, bgColor }: FeatureCar
                     </div>
 
                     <div className="mt-4 flex gap-1">
-                         <ButtonFill btnText="Choose Plan" className="px-14" />
+                         <ButtonFill btnText="Choose Plan" className={btnClass} />
                          <ButtonCircle />
                     </div>
                </div>
