@@ -1,3 +1,7 @@
+import { motion, useAnimation, useInView, easeOut } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+
 import FeatureCard from "../Card/FeatureCard";
 
 type ButtonVariant = "violet" | "green" | "orange" | "yellow";
@@ -12,6 +16,41 @@ interface Feature {
 }
 
 const Features = () => {
+
+     const containerVariants = {
+          hidden: {},
+          visible: {
+               transition: {
+                    staggerChildren: 0.25,
+               },
+          },
+     };
+
+     const cardVariants = {
+          hidden: {
+               scale: 0,
+               opacity: 0,
+          },
+          visible: {
+               scale: 1,
+               opacity: 1,
+               transition: {
+                    duration: 0.6,
+                    ease: easeOut,
+               },
+          },
+     };
+
+     const ref = useRef(null);
+     const controls = useAnimation();
+     const inView = useInView(ref, { once: true, margin: "-100px" });
+
+     useEffect(() => {
+          if (inView) {
+               controls.start("visible");
+          }
+     }, [inView, controls]);
+
      const features: Feature[] = [
           {
                title: (
@@ -80,19 +119,27 @@ const Features = () => {
      ];
 
      return (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-8 max-w-7xl mx-auto mb-20">
+          <motion.div
+               ref={ref}
+               variants={containerVariants}
+               initial="hidden"
+               animate={controls}
+               className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-8 max-w-7xl mx-auto mb-20"
+          >
                {features.map((feature, index) => (
-                    <FeatureCard
-                         key={index}
-                         title={feature.title}
-                         description={feature.description}
-                         iconSrc={feature.iconSrc}
-                         bgSrc={feature.bgSrc}
-                         bgColor={feature.bgColor}
-                         btnVariant={feature.btnVariant}
-                    />
+                    <motion.div key={index} variants={cardVariants}>
+                         <FeatureCard
+                              title={feature.title}
+                              description={feature.description}
+                              iconSrc={feature.iconSrc}
+                              bgSrc={feature.bgSrc}
+                              bgColor={feature.bgColor}
+                              btnVariant={feature.btnVariant}
+                         />
+                    </motion.div>
                ))}
-          </div>
+          </motion.div>
+
      );
 };
 
