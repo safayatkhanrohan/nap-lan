@@ -89,7 +89,7 @@ const Hero = () => {
                               <img
                                    src="/images/hero-icon-5.png"
                                    alt="Hero Icon"
-                                   className="absolute -top-12 sm:-top-14 right-0 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 rotate-15 hidden sm:block"
+                                   className="absolute -top-12 sm:-top-16 right-5 w-auto h-16 sm:h-20 md:h-24 lg:h-32 rotate-15 hidden sm:block"
                               />
                          </motion.div>
 
@@ -101,7 +101,7 @@ const Hero = () => {
                          </motion.div>
 
                          <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                              <motion.div className="flex gap-2" variants={buttonVariants}>
+                              <motion.div className="flex gap-1" variants={buttonVariants}>
                                    <ButtonFill
                                         onClick={() => console.log("Button clicked!")}
                                         className="bg-blue-500 text-white rounded-full text-sm sm:text-base px-4 sm:px-6 py-2"
@@ -111,7 +111,7 @@ const Hero = () => {
                                    <ButtonCircle />
                               </motion.div>
 
-                              <motion.div className="flex gap-2" variants={buttonVariants}>
+                              <motion.div className="flex gap-1" variants={buttonVariants}>
                                    <ButtonOutline
                                         btnText="See Sample Test"
                                         className="py-1.5 text-sm sm:text-base px-4 sm:px-6"
@@ -190,14 +190,12 @@ const Hero = () => {
                                    className="absolute w-16 sm:w-20 h-16 sm:h-20 right-0 top-14 sm:top-18 rotate-15"
                               />
                          </div>
+                         <div
+                              className="absolute w-[400px] sm:w-[500px] md:w-[570px] h-[400px] sm:h-[500px] md:h-[570px] left-0 top-0 -z-10 bg-[#2AF595] opacity-10 sm:opacity-20 blur-[120px] sm:blur-[150px] md:blur-[180px]"
+                         />
                     </motion.div>
 
-                    <div
-                         className="absolute w-[400px] sm:w-[500px] md:w-[570px] h-[400px] sm:h-[500px] md:h-[570px] left-[50%] md:left-[600px] top-[180px] sm:top-[200px] md:top-[230px] bg-[#2AF595] opacity-10 sm:opacity-20 blur-[120px] md:blur-[150px]"
-                         style={{
-                              filter: "blur(300px) sm:blur(350px) md:blur(400px)",
-                         }}
-                    />
+                    
                </motion.section>
           </div>
      );

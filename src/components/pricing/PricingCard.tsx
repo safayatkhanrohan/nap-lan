@@ -1,3 +1,5 @@
+// src/components/pricing/PricingCard.tsx
+import { motion } from "framer-motion";
 import ButtonCircle from "../button/ButtonCircle";
 import ButtonFill from "../button/ButtonFill";
 import PricingHeader from "./PricingHeader";
@@ -11,6 +13,7 @@ interface PricingCardProps {
      includes: string[];
      className?: string;
 }
+
 const PricingCard = ({
      imageSrc,
      title,
@@ -20,7 +23,14 @@ const PricingCard = ({
      color,
 }: PricingCardProps) => {
      return (
-          <div className="rounded-[20px] shadow-[0px_4px_17px_rgba(0,0,0,0.15)] p-6 box-border">
+          <motion.div
+               whileHover={{
+                    y: -10,
+                    boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.15)",
+                    transition: { duration: 0.4 }
+               }}
+               className="rounded-[20px] shadow-[0px_4px_17px_rgba(0,0,0,0.15)] p-6 box-border bg-white h-full flex flex-col"
+          >
                <PricingHeader
                     imageSrc={imageSrc}
                     title={title}
@@ -28,18 +38,26 @@ const PricingCard = ({
                     billingCycle={billingCycle}
                     color={color}
                />
-               <div className="mt-6 p-2">
-                    <h3 className="font-semibold mb-4">Includes:</h3>
+
+               <div className="mt-6 p-2 flex-grow">
+                    <h3 className="font-semibold mb-4 text-center">Includes:</h3>
                     <ul>
                          {includes.map((item, index) => (
-                              <li key={index} className="mb-6 flex items-start gap-2">
-                                   <span>
+                              <motion.li
+                                   key={index}
+                                   className="mb-4 flex items-start gap-2"
+                                   initial={{ opacity: 0, x: -10 }}
+                                   animate={{ opacity: 1, x: 0 }}
+                                   transition={{ delay: index * 0.1, duration: 0.4 }}
+                              >
+                                   <span className="text-[#ff7777]">
                                         <svg
-                                             className="w-4 h-4 text-[#ff7777] shrink-0 mt-1"
+                                             className="w-4 h-4 shrink-0 mt-1"
                                              fill="none"
                                              stroke="currentColor"
                                              strokeWidth={2}
-                                             viewBox="0 0 24 24">
+                                             viewBox="0 0 24 24"
+                                        >
                                              <path
                                                   strokeLinecap="round"
                                                   strokeLinejoin="round"
@@ -48,15 +66,16 @@ const PricingCard = ({
                                         </svg>
                                    </span>
                                    {item}
-                              </li>
+                              </motion.li>
                          ))}
                     </ul>
                </div>
-               <div className="flex gap-0.5">
-                    <ButtonFill btnText="Choose Sales" className="flex-1" />
+
+               <div className="flex gap-2 mt-6">
+                    <ButtonFill btnText="Choose Plan" className="flex-1" />
                     <ButtonCircle />
                </div>
-          </div>
+          </motion.div>
      );
 };
 
