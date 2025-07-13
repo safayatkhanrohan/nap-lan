@@ -26,7 +26,7 @@ const PricingCard = ({
           <motion.div
                whileHover={{
                     y: -10,
-                    boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.15)",
+                    // boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.15)",
                     transition: { duration: 0.4 }
                }}
                className="rounded-[20px] shadow-[0px_4px_17px_rgba(0,0,0,0.15)] p-6 box-border bg-white h-full flex flex-col"

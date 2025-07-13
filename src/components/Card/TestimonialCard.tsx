@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Rating from "@mui/material/Rating";
 interface FeatureCardProps {
      author: string;
@@ -7,7 +8,10 @@ interface FeatureCardProps {
 }
 const TestimonialCard = ({ author, content, rating, authorImage }: FeatureCardProps) => {
      return (
-          <div className="w-[385px] h-[240px] p-6 shadow-[0px_4px_17px_rgba(0,0,0,0.15)] rounded-[20px]">
+          <motion.div whileHover={{
+               y: -10,
+               transition: { duration: 0.4 }
+          }} className="w-[385px] h-[240px] p-6 shadow-[0px_4px_17px_rgba(0,0,0,0.15)] rounded-[20px]">
                <div className="flex items-center gap-4 mb-4">
                     <div className="w-[90px] h-[90px] rounded-full overflow-hidden">
                          <img
@@ -22,7 +26,7 @@ const TestimonialCard = ({ author, content, rating, authorImage }: FeatureCardPr
                     </div>
                </div>
                <p className="mt-3 text-[#222E48B2]/70">{content}</p>
-          </div>
+          </motion.div>
      );
 };
 
