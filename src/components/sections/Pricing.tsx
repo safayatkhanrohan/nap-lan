@@ -4,8 +4,41 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import PricingCard from "../pricing/PricingCard";
+import { useEffect, useRef } from "react";
+import { easeOut, useAnimation, useInView, motion } from "framer-motion";
 
 const Pricing = () => {
+
+     const controls = useAnimation();
+     const ref = useRef(null);
+     const inView = useInView(ref, { once: true, margin: "-100px" });
+
+     useEffect(() => {
+          if (inView) {
+               controls.start("visible");
+          }
+     }, [inView, controls]);
+
+     const containerVariants = {
+          hidden: {},
+          visible: {
+               transition: {
+                    staggerChildren: 0.3,
+               },
+          },
+     };
+
+     const itemVariants = {
+          hidden: { opacity: 0, y: 50 },
+          visible: {
+               opacity: 1,
+               y: 0,
+               transition: {
+                    duration: 0.8,
+                    ease: easeOut
+               }
+          }
+     };
      const pricingPlans = [
           {
                id: 1,
@@ -66,15 +99,26 @@ const Pricing = () => {
      ];
      return (
           <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6">
-               <div>
-                    <h2 className="text-5xl font-bold text-center mb-4">
+               <motion.div
+                    ref={ref}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={controls}
+               >
+                    <motion.h2
+                         className="text-5xl font-bold text-center mb-4"
+                         variants={itemVariants}
+                    >
                          Simple & <span className="text-[#FF7777]">Transparent</span> Pricing
-                    </h2>
-                    <p className="text-center text-lg leading-[165%] text-[#222E48]/70 mb-8">
+                    </motion.h2>
+                    <motion.p
+                         className="text-center text-lg leading-[165%] text-[#222E48]/70 mb-8"
+                         variants={itemVariants}
+                    >
                          Choose the plan that best fits your child's learning journey and <br />{" "}
                          unlock their full potential for NAPLAN success.
-                    </p>
-               </div>
+                    </motion.p>
+               </motion.div>
 
                <Swiper
                     modules={[Pagination]}
