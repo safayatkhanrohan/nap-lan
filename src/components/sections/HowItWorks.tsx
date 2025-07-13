@@ -1,7 +1,40 @@
+import { useRef, useEffect } from "react";
+import { motion, useAnimation, useInView, easeOut } from "framer-motion";
+
 import HIWCard from "../Card/HIWCard";
 
 
 const HowItWorks = () => {
+     const controls = useAnimation();
+     const ref = useRef(null);
+     const inView = useInView(ref, { once: true, margin: "-100px" });
+
+     useEffect(() => {
+          if (inView) {
+               controls.start("visible");
+          }
+     }, [inView, controls]);
+     const containerVariants = {
+          hidden: {},
+          visible: {
+               transition: {
+                    staggerChildren: 0.3,
+               },
+          },
+     };
+
+     const itemVariants = {
+          hidden: { opacity: 0, y: 40 },
+          visible: {
+               opacity: 1,
+               y: 0,
+               transition: {
+                    duration: 0.6,
+                    ease: easeOut,
+               },
+          },
+     };
+
      const steps = [
           {
                id: 1,
@@ -49,24 +82,44 @@ const HowItWorks = () => {
                     alt="How It Works Banner"
                     className="h-full w-auto absolute top-0 left-36 opacity-20 -z-10"
                />
-               <h2 className="text-5xl font-bold mb-5 -ml-[30px]">
-                    How it <span className="text-[#FF7777]">works</span>
-               </h2>
-               <p className="text-[#222E48]/70 mb-5 -ml-[30px]">Find out in 5 steps</p>
-               <div className="flex gap-8 justify-between h-full">
-                    {steps.map((step) => (
-                         <HIWCard
-                              title={step.title}
-                              description={step.description}
-                              imageSrc={step.imageSrc}
-                              key={step.id}
-                              imgBg={step.imgBg}
-                              index={step.id}
-                              btnCls={step.btnCls || ""}
-                              position={step.position}
-                         />
-                    ))}
-               </div>
+               <motion.div
+                    ref={ref}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={controls}
+               >
+                    <motion.h2
+                         className="text-5xl font-bold mb-5 -ml-[30px]"
+                         variants={itemVariants}
+                    >
+                         How it <span className="text-[#FF7777]">works</span>
+                    </motion.h2>
+                    <motion.p
+                         className="text-[#222E48]/70 mb-5 -ml-[30px]"
+                         variants={itemVariants}
+                    >
+                         Find out in 5 steps
+                    </motion.p>
+
+                    <motion.div
+                         className="flex gap-8 justify-between h-full"
+                         variants={containerVariants}
+                    >
+                         {steps.map((step) => (
+                              <motion.div key={step.id} variants={itemVariants}>
+                                   <HIWCard
+                                        title={step.title}
+                                        description={step.description}
+                                        imageSrc={step.imageSrc}
+                                        imgBg={step.imgBg}
+                                        index={step.id}
+                                        btnCls={step.btnCls || ""}
+                                        position={step.position}
+                                   />
+                              </motion.div>
+                         ))}
+                    </motion.div>
+               </motion.div>
                <img
                     src="/images/howitworks/line.png"
                     alt="Line"
