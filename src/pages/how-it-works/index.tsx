@@ -1,7 +1,63 @@
+/* eslint-disable */
+import { useEffect, useRef, useState } from "react";
 import HIWCard2 from "../../components/Card/HIWCard2";
 import CTA from "../../components/sections/CTA";
+import { easeOut, motion } from "framer-motion";
 
 const HowItWorks = () => {
+
+  const sectionRefs = [
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null)
+  ];
+  const [visibleSections, setVisibleSections] = useState<number[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2
+    };
+
+    sectionRefs.forEach((ref, index) => {
+      const element = ref.current;
+      if (!element) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setVisibleSections(prev => [...prev, index]);
+            observer.disconnect();
+          }
+        });
+      }, observerOptions);
+
+      if (ref.current) {
+        observer.observe(ref.current);
+        observers.push(observer);
+      }
+    });
+
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, []);
+
+  const animationVariants = {
+    hiddenLeft: { opacity: 0, x: -100 },
+    hiddenRight: { opacity: 0, x: 100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: easeOut
+      }
+    }
+  };
 
   const images = [
     {
@@ -66,45 +122,110 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14">
+        <div
+          ref={sectionRefs[0]}
+          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14"
+        >
           <div className="flex items-center h-full w-full col-span-3">
-            <HIWCard2 {...cardData[0]} />
+            <motion.div
+              initial="hiddenLeft"
+              animate={visibleSections.includes(0) ? "visible" : "hiddenLeft"}
+              variants={animationVariants}
+            >
+              <HIWCard2 {...cardData[0]} />
+            </motion.div>
           </div>
           <div className="flex justify-end items-center col-span-2">
-            <img src={images[0].src} alt={images[0].alt} className="max-h-[550px]" />
+            <motion.div
+              initial="hiddenRight"
+              animate={visibleSections.includes(0) ? "visible" : "hiddenRight"}
+              variants={animationVariants}
+              transition={{ delay: 0.1 }}
+            >
+              <img src={images[0].src} alt={images[0].alt} className="max-h-[550px]" />
+            </motion.div>
           </div>
         </div>
 
-
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14">
+        {/* Section 2 */}
+        <div
+          ref={sectionRefs[1]}
+          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14"
+        >
           <div className="flex items-center col-span-2">
-            <img src={images[1].src} alt={images[1].alt} className="max-h-[550px]" />
+            <motion.div
+              initial="hiddenLeft"
+              animate={visibleSections.includes(1) ? "visible" : "hiddenLeft"}
+              variants={animationVariants}
+            >
+              <img src={images[1].src} alt={images[1].alt} className="max-h-[550px]" />
+            </motion.div>
           </div>
           <div className="flex items-center h-full w-full col-span-3">
-            <HIWCard2 {...cardData[1]} />
+            <motion.div
+              initial="hiddenRight"
+              animate={visibleSections.includes(1) ? "visible" : "hiddenRight"}
+              variants={animationVariants}
+              transition={{ delay: 0.1 }}
+            >
+              <HIWCard2 {...cardData[1]} />
+            </motion.div>
           </div>
         </div>
 
-
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14">
+        {/* Section 3 */}
+        <div
+          ref={sectionRefs[2]}
+          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14"
+        >
           <div className="flex items-center h-full w-full col-span-3">
-            <HIWCard2 {...cardData[2]} />
+            <motion.div
+              initial="hiddenLeft"
+              animate={visibleSections.includes(2) ? "visible" : "hiddenLeft"}
+              variants={animationVariants}
+            >
+              <HIWCard2 {...cardData[2]} />
+            </motion.div>
           </div>
           <div className="flex justify-end items-center col-span-2">
-            <img src={images[2].src} alt={images[2].alt} className="max-h-[550px]" />
+            <motion.div
+              initial="hiddenRight"
+              animate={visibleSections.includes(2) ? "visible" : "hiddenRight"}
+              variants={animationVariants}
+              transition={{ delay: 0.1 }}
+            >
+              <img src={images[2].src} alt={images[2].alt} className="max-h-[550px]" />
+            </motion.div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-[150px]">
+        {/* Section 4 */}
+        <div
+          ref={sectionRefs[3]}
+          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-[150px]"
+        >
           <div className="flex items-center col-span-2">
-            <img src={images[3].src} alt={images[3].alt} className="max-h-[550px]" />
+            <motion.div
+              initial="hiddenLeft"
+              animate={visibleSections.includes(3) ? "visible" : "hiddenLeft"}
+              variants={animationVariants}
+            >
+              <img src={images[3].src} alt={images[3].alt} className="max-h-[550px]" />
+            </motion.div>
           </div>
           <div className="flex items-center h-full w-full col-span-3">
-            <HIWCard2 {...cardData[3]} />
+            <motion.div
+              initial="hiddenRight"
+              animate={visibleSections.includes(3) ? "visible" : "hiddenRight"}
+              variants={animationVariants}
+              transition={{ delay: 0.1 }}
+            >
+              <HIWCard2 {...cardData[3]} />
+            </motion.div>
           </div>
         </div>
 
-        <CTA imgSrc="bg-[url('/images/cta/image-2.png')]"/>
+        <CTA imgSrc="bg-[url('/images/cta/image-2.png')]" />
 
 
 
