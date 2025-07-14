@@ -41,3 +41,49 @@ body {
     align-items: center;
     margin-bottom: 60px;
 }
+
+.gradient-border {
+    --border-radius: 20px;
+    position: relative;
+    border-radius: var(--border-radius);
+    isolation: isolate;
+    overflow: hidden;
+    background-color: white;
+}
+
+.gradient-border::before,
+.gradient-border::after {
+    content: '';
+    position: absolute;
+}
+
+.gradient-border::before {
+    width: 200%;
+    height: 200%;
+    /* background-image: conic-gradient(var(--hiw-border-color) 0deg,
+                rgba(255, 174, 41, 0) 160deg,
+                transparent 180deg,
+                var(--hiw-border-color) 180deg,
+                rgba(255, 174, 41, 0) 300deg); */
+    background-image: var(--hiw-border-color1),
+        var(--hiw-border-color2);
+    inset: -50%;
+    z-index: -2;
+    /* rotate: -30deg; */
+    animation: borderanimation 4s linear infinite;
+}
+
+@keyframes borderanimation {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.gradient-border::after {
+    --inset: 2px;
+    inset: var(--inset);
+    border-radius: calc(var(--border-radius) - var(--inset));
+    z-index: -1;
+    background-color: white;
+    transition: all 0.3s linear;
+}
