@@ -67,7 +67,7 @@ const ForSchool = () => {
           Discover the features that make NAPLAN Prep the ideal solution for school-wide NAPLAN readiness.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-8 mb-36">
           {data.map((item, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md h-[330px]">
               <div className="flex flex-col justify-center items-center gap-6 h-full p-6">
