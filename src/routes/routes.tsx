@@ -5,6 +5,8 @@ import HowItWorks from "../pages/how-it-works";
 import ForSchool from "../pages/For school";
 import PricingPlan from "../pages/pricing-plan";
 import FAQ from "../pages/FAQ";
+import Login from "../pages/login";
+import Register from "../pages/register";
 
 const router = createBrowserRouter([
      {
@@ -18,15 +20,26 @@ const router = createBrowserRouter([
             {
                 path: "/how-it-works",
                 element: <HowItWorks />
-            },{
+            },
+            {
                 path: "/pricing",
                 element: <PricingPlan />
-            },{
+            },
+            {
                 path: "/faq",
                 element: <FAQ />
-            },{
+            },
+            {
                 path: "/for-schools",
                 element: <ForSchool />
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/register",
+                element: <Register />
             },
           ]
      },

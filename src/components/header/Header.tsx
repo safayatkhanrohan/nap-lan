@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import ButtonOutline from "../button/ButtonOutline";
 import ButtonCircle from "../button/ButtonCircle";
 import Navbar from "../Navbar/Navbar";
+import { useNavigate } from "react-router";
 
 const Header = () => {
      const [showSearchInput, setShowSearchInput] = useState(false);
@@ -10,6 +11,7 @@ const Header = () => {
      const [showCategories, setShowCategories] = useState(false);
      const dropdownRef = useRef<HTMLDivElement>(null);
      const searchRef = useRef<HTMLFormElement>(null);
+     const navigate = useNavigate();
 
      // Sample categories data
      const categories = [
@@ -165,8 +167,8 @@ const Header = () => {
                          />
                     </div>
                     <div className="flex justify-between items-center gap-1">
-                         <ButtonOutline type="button" btnText="Login" />
-                         <ButtonCircle />
+                         <ButtonOutline type="button" btnText="Login" onClick={() => navigate("/login")} />
+                         <ButtonCircle onClick={() => navigate("/login")} />
                     </div>
                </div>
 
