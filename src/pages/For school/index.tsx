@@ -60,7 +60,7 @@ const ForSchool = () => {
           Provide your teachers and students with a comprehensive, easy-to-use platform for NAPLAN practice and progress tracking.
         </p>
 
-        <div className="flex justify-center items-center mt-6 sm:mt-10 gap-2 sm:gap-4 mx-auto px-4">
+        <div className="flex justify-center items-center mt-6 sm:mt-10 gap-1 mx-auto px-4">
           <ButtonFill btnText="Request a Demo" />
           <ButtonCircle />
         </div>
