@@ -40,7 +40,7 @@ const PricingCard = ({
                />
 
                <div className="mt-6 p-2 flex-grow">
-                    <h3 className="font-semibold mb-4 text-center">Includes:</h3>
+                    <h3 className="font-semibold mb-4">Includes:</h3>
                     <ul>
                          {includes.map((item, index) => (
                               <motion.li
