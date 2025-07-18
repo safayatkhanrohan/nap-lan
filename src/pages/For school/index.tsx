@@ -1,6 +1,7 @@
 import ButtonCircle from "../../components/button/ButtonCircle"
 import ButtonFill from "../../components/button/ButtonFill"
 import CTA from "../../components/sections/CTA"
+import CurvedCard from "./_components/CurvedCard"
 
 const ForSchool = () => {
 
@@ -9,38 +10,44 @@ const ForSchool = () => {
     {
       title: "Bulk Licensing & Management",
       des: "Easily manage student accounts and access for entire classes or year levels with centralized control.",
-      icon: "/images/for-school/icon-1.png",
-      bg: "bg-[#007DFC]"
+      bg: "bg-[#007DFC]", 
+      hoverBg: "group-hover:bg-[#007DFC]/80",
+      hoverIconColor: "group-hover:text-[#007DFC]/90"
     },
     {
       title: "Teacher Dashboards & Analytics",
       des: "Gain insights into student and class performance with detailed analytics to identify areas for improvement.",
-      icon: "/images/for-school/icon-1.png",
-      bg: "bg-[#FF7777]"
+      bg: "bg-[#FF7777]",
+      hoverBg: "group-hover:bg-[#FF7777]/80",
+      hoverIconColor: "group-hover:text-[#FF7777]/90"
     },
     {
       title: "Curriculum Aligned Content",
       des: "Access a vast library of practice tests and questions aligned with the Australian curriculum.",
-      icon: "/images/for-school/icon-1.png",
-      bg: "bg-[#ABCB5F]"
+      bg: "bg-[#ABCB5F]",
+      hoverBg: "group-hover:bg-[#ABCB5F]/80",
+      hoverIconColor: "group-hover:text-[#ABCB5F]/90"
     },
     {
       title: "Dedicated School Support",
       des: "Receive priority support and resources tailored to the needs of educational institutions.",
-      icon: "/images/for-school/icon-1.png",
-      bg: "bg-[#FFA500]"
+      bg: "bg-[#FFA500]",
+      hoverBg: "group-hover:bg-[#FFA500]/80 group-hover:bg-url('/images/for-school/hover-bg.png')",
+      hoverIconColor: "group-hover:text-[#FFA500]/90"
     },
     {
       title: "Customizable Practice Tests",
       des: "Create custom practice tests to focus on specific subjects or areas where students need extra help.",
-      icon: "/images/for-school/icon-1.png",
-      bg: "bg-[#A558AF]"
+      bg: "bg-[#A558AF]",
+      hoverBg: "group-hover:bg-[#A558AF]/80",
+      hoverIconColor: "group-hover:text-[#A558AF]/90"
     },
     {
       title: "Secure & Compliant Platform",
       des: "Rest assured with a platform designed with student data privacy and security in mind.",
-      icon: "/images/for-school/icon-1.png",
-      bg: "bg-[#FFAC58]"
+      bg: "bg-[#FFAC58]",
+      hoverBg: "group-hover:bg-[#FFAC58]/80",
+      hoverIconColor: "group-hover:text-[#FFAC58]/90"
     },
   ]
   return (
@@ -67,20 +74,20 @@ const ForSchool = () => {
           Discover the features that make NAPLAN Prep the ideal solution for school-wide NAPLAN readiness.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-8 mb-36">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 px-8 mb-36">
           {data.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md h-[330px]">
-              <div className="flex flex-col justify-center items-center gap-6 h-full p-6">
-                <div className={`h-[70px] w-[70px] ${item.bg} flex justify-center items-center rounded-xl shadow-[0px_-3px_4px_0px_#00000040_inset]`}>
-                  <img src={item.icon} alt={item.title} className="w-12 h-12" />
-                </div>
-                <h3 className="text-2xl font-bold text-[#222E48]">{item.title}</h3>
-                <p className="text-[#222E48]/70 font-medium text-lg">{item.des}</p>
-              </div>
-            </div>
+            <CurvedCard
+              key={index}
+              bg={item.bg}
+              title={item.title}
+              des={item.des}
+              hoverBg={item.hoverBg}
+              hoverIconColor={item.hoverIconColor}
+            />
           ))}
         </div>
       </div>
+
 
       <CTA imgSrc="bg-[url('/images/for-school/cta.png')]" />
     </div>
