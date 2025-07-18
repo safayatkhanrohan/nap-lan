@@ -31,8 +31,10 @@ const ValueProposition = () => {
                initial="hidden"
                animate={inView ? "show" : "hidden"}
                variants={container}
-               className="grid grid-cols-12 max-w-[1280px] mx-auto px-6 py-12 mt-[100px] gap-8"
+               className="grid grid-cols-12 max-w-[1280px] mx-auto px-6 py-12 mt-[100px] gap-8 relative"
           >
+               <div className="w-[420px] h-[420px] rounded-full bg-[#007dfc] absolute top-0 -left-1/5 -z-10 opacity-80" style={{filter: "blur(250px)"}}/>
+               <div className="w-[420px] h-[420px] rounded-full bg-[#2AF595] absolute bottom-0 -right-1/5 translate-y-1/3 -z-10 opacity-30" style={{filter: "blur(250px)"}}/>
                <motion.div
                     variants={item}
                     className="col-span-5 flex justify-center"

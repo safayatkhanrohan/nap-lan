@@ -98,7 +98,7 @@ const Pricing = () => {
           },
      ];
      return (
-          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6">
+          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6 relative">
                <motion.div
                     ref={ref}
                     variants={containerVariants}
