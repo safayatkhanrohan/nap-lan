@@ -124,7 +124,7 @@ const Features = () => {
                variants={containerVariants}
                initial="hidden"
                animate={controls}
-               className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-8 max-w-7xl mx-auto mb-20"
+               className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-8 max-w-7xl mx-auto mb-20 relative"
           >
                {features.map((feature, index) => (
                     <motion.div key={index} variants={cardVariants}>
@@ -138,6 +138,9 @@ const Features = () => {
                          />
                     </motion.div>
                ))}
+
+               <div className="w-[460px] h-[460px] rounded-full bg-[#E6700B] absolute bottom-0 -right-1/5 translate-y-1/3 opacity-20" style={{ filter: "blur(150px)" }} />
+               <div className="w-[550px] h-[550px] rounded-full bg-[#2AF595] absolute bottom-0 -left-1/5 translate-y-1/3 opacity-20" style={{ filter: "blur(200px)" }} />
           </motion.div>
 
      );

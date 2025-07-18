@@ -99,6 +99,7 @@ const Pricing = () => {
      ];
      return (
           <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6 relative">
+               <div className="w-[420px] h-[420px] rounded-full bg-[#E6700B] absolute bottom-0 -left-1/5 translate-y-1/3 -z-10 opacity-20" style={{ filter: "blur(150px)" }} />
                <motion.div
                     ref={ref}
                     variants={containerVariants}

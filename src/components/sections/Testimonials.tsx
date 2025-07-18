@@ -41,10 +41,24 @@ const Testimonials = () => {
                rating: 5,
                authorImage: "/images/author.png",
           },
+          {
+               id: 6,
+               author: "Michael Gray",
+               content: "This app has made a world of difference for our family. We can't thank you enough!",
+               rating: 5,
+               authorImage: "/images/author.png",
+          },
+          {
+               id: 7,
+               author: "Sarah Connor",
+               content: "A fantastic app that has truly helped us navigate parenthood.",
+               rating: 5,
+               authorImage: "/images/author.png",
+          },
      ];
 
      return (
-          <div className="max-w-7xl mx-auto px-4 py-6 mt-10 mb-20">
+          <div className="w-full mx-auto px-4 py-6 mt-10 mb-20">
                <h2 className="text-center text-5xl font-bold mb-8 capitalize">
                     What parents <span className="text-[#FF7777]">are saying</span>
                </h2>
@@ -62,6 +76,9 @@ const Testimonials = () => {
                               640: { slidesPerView: 1 },
                               768: { slidesPerView: 2 },
                               1280: { slidesPerView: 3 },
+                              1680: { slidesPerView: 4 },
+                              1920: { slidesPerView: 5 },
+
                          }}
                     >
                          {testimonials.map((testimonial) => (

@@ -37,8 +37,12 @@ body {
     border-radius: 50%;
 }
 
+
+
 .swiper-wrapper {
+    display: flex;
     align-items: center;
+    justify-content: space-evenly;
     margin-bottom: 60px;
 }
 

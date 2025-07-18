@@ -76,7 +76,8 @@ const HowItWorks = () => {
           },
      ];
      return (
-          <div className="max-w-7xl h-[745px] mx-auto px-6 relative mb-16">
+          <div className="max-w-7xl h-[745px] mx-auto px-6 relative mb-16 mt-24">
+               <div className="w-[480px] h-[480px] rounded-full bg-[#007DFC] absolute top-0 -right-1/5 -translate-y-1/3 -z-10 opacity-20" style={{ filter: "blur(150px)" }} />
                <img
                     src="/images/hiw-banner.png"
                     alt="How It Works Banner"
