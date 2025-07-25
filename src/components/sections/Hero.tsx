@@ -56,7 +56,7 @@ const Hero = () => {
      return (
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                <motion.section
-                    className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center py-6 sm:py-8 md:py-12"
+                    className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center py-6 sm:py-8 md:py-12 overflow-x-clip"
                     initial="hidden"
                     animate="visible"
                     variants={containerVariants}
@@ -131,10 +131,10 @@ const Hero = () => {
 
                     {/* Right Section */}
                     <motion.div
-                         className="flex items-center justify-center md:justify-end order-1 md:order-2 relativez"
+                         className="flex items-center justify-center md:justify-end order-1 md:order-2 relative"
                          variants={imageVariants}
                     >
-                         <div className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[480px] h-[360px] sm:h-[400px] md:h-[480px] lg:h-[560px] xl:h-[640px] relative">
+                         <div className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[480px] h-[280px] sm:h-[360px] md:h-[400px] lg:h-[480px] xl:h-[560px] relative">
                               <img
                                    src="/images/hero-img.webp"
                                    alt="Happy student learning"
@@ -145,8 +145,8 @@ const Hero = () => {
                                    alt="Animated background"
                                    className="absolute w-full -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-20 xl:-bottom-[82px] -z-5"
                               />
-                              <div className="absolute flex items-center gap-2 sm:gap-3 md:gap-4 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[230px] min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[110px] right-0 top-[120px] sm:top-[140px] md:top-[160px] lg:top-[180px] xl:top-[200px] md:translate-x-1/3 lg:translate-x-1/2 rounded-[16px] sm:rounded-[20px] bg-white shadow-[12px_20px_30px_rgba(4,65,36,0.1)] p-3 sm:p-4 md:p-5 lg:p-6">
-                                   <div className="w-10 sm:w-12 md:w-14 lg:w-16 h-10 sm:h-12 md:h-14 lg:h-16 bg-[#F7AEFF] rounded-lg shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] flex items-center justify-center">
+                              <div className="absolute flex items-center gap-2 sm:gap-3 md:gap-4 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[230px] min-h-[60px] sm:min-h-[80px] md:min-h-[90px] lg:min-h-[100px] xl:min-h-[110px] right-0 top-[80px] sm:top-[120px] md:top-[140px] lg:top-[160px] xl:top-[180px] md:translate-x-1/4 lg:translate-x-1/3 xl:translate-x-1/2 rounded-[16px] sm:rounded-[20px] bg-white shadow-[12px_20px_30px_rgba(4,65,36,0.1)] p-3 sm:p-4 md:p-5 lg:p-6">
+                                   <div className="w-10 sm:w-12 md:w-14 lg:w-16 h-10 sm:h-12 md:h-14 lg:h-16 bg-[#F7AEFF] rounded-lg shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] hidden sm:flex items-center justify-center">
                                         <img
                                              src="/images/hero-icon-1.png"
                                              alt="Hero Icon"
@@ -161,9 +161,9 @@ const Hero = () => {
                                    </div>
                               </div>
 
-                              <div className="absolute flex items-center gap-2 sm:gap-3 md:gap-4 w-[160px] sm:w-[180px] md:w-[200px] lg:w-[230px] h-[80px] sm:h-[90px] md:h-[100px] lg:h-[110px] -left-6 sm:-left-8 md:-left-10 lg:-left-12 bottom-0 translate-y-2 sm:translate-y-3 rounded-[16px] sm:rounded-[20px] bg-white shadow-[12px_20px_30px_rgba(4,65,36,0.1)]">
+                              <div className="absolute flex items-center gap-2 sm:gap-3 md:gap-4 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[230px] h-[60px] sm:h-[80px] md:h-[90px] lg:h-[100px] xl:h-[110px] -left-4 sm:-left-6 md:-left-8 lg:-left-10 xl:-left-12 bottom-0 translate-y-1 sm:translate-y-2 md:translate-y-3 rounded-[16px] sm:rounded-[20px] bg-white shadow-[12px_20px_30px_rgba(4,65,36,0.1)]">
                                    <div className="relative w-full h-full p-3 sm:p-4 md:p-5 lg:p-6">
-                                        <div className="absolute w-8 sm:w-10 md:w-12 lg:w-14 h-8 sm:h-10 md:h-12 lg:h-14 top-0 left-0 -translate-x-1/4 -translate-y-1/4 bg-[#FFA558] shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] rounded-full flex items-center justify-center">
+                                        <div className="absolute w-8 sm:w-10 md:w-12 lg:w-14 h-8 sm:h-10 md:h-12 lg:h-14 top-0 left-0 -translate-x-1/4 -translate-y-1/4 bg-[#FFA558] shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_0px_4px_rgba(255,255,255,0.5)] rounded-full hidden sm:flex items-center justify-center">
                                              <img
                                                   src="/images/hero-icon-4.png"
                                                   alt="Hero Icon"
@@ -194,7 +194,7 @@ const Hero = () => {
                               />
                          </div>
                          <div
-                              className="absolute w-[300px] sm:w-[400px] md:w-[450px] lg:w-[500px] xl:w-[570px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[570px] left-0 top-0 -z-10 bg-[#2AF595] opacity-10 sm:opacity-15 md:opacity-20 blur-[100px] sm:blur-[120px] md:blur-[150px] lg:blur-[180px]"
+                              className="absolute w-[200px] sm:w-[300px] md:w-[400px] lg:w-[450px] xl:w-[500px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[450px] xl:h-[500px] left-0 top-0 -z-10 bg-[#2AF595] opacity-10 sm:opacity-15 md:opacity-20 blur-[80px] sm:blur-[100px] md:blur-[120px] lg:blur-[150px] xl:blur-[180px]"
                          />
                     </motion.div>
                </motion.section>

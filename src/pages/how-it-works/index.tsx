@@ -1,11 +1,10 @@
 /* eslint-disable */
 import { useEffect, useRef, useState } from "react";
-import HIWCard2 from "../../components/Card/HIWCard2";
 import CTA from "../../components/sections/CTA";
 import { easeOut, motion } from "framer-motion";
+import HIWCard2 from "../../components/Card/HIWCard2";
 
 const HowItWorks = () => {
-
   const sectionRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -88,16 +87,16 @@ const HowItWorks = () => {
     },
     {
       heading: "Practice with Comprehensive Tests",
-      description: "Our platform offers tailored content for Year 3, S, 7, and 9. Simply select the appropriate year level to access curriculum-aligned practice tests and resources designed specifically for your child's needs.",
+      description: "Our platform offers tailored content for Year 3, 5, 7, and 9. Simply select the appropriate year level to access curriculum-aligned practice tests and resources designed specifically for your child's needs.",
       btnCls: "bg-[#8D79FF]",
       btnText: "2",
       borderColor: ["linear-gradient(229.97deg, #8D79FF 1.28%, rgba(141, 121, 255, 0) 54.93%)", "linear-gradient(238.68deg, rgba(141, 121, 255, 0) 55.65%, #8D79FF 98.24%)"]
     },
     {
       heading: "Review Performance & Learn",
-      description: "Our platform offers tailored content for Year 3, S, 7, and 9. Simply select the appropriate year level to access curriculum-aligned practice tests and resources designed specifically for your child's needsReview Performance & LearnAfter each test, receive instant feedback and detailed explanations for every question- Our comprehensive analytics highlight strengths and weaknesses, allowing for focused learning and improvement in specific areas.",
+      description: "After each test, receive instant feedback and detailed explanations for every question. Our comprehensive analytics highlight strengths and weaknesses, allowing for focused learning and improvement in specific areas.",
       btnCls: "bg-[#A4C752]",
-      btnText: "2",
+      btnText: "3",
       borderColor: ["linear-gradient(229.97deg, #A4C752 1.28%, rgba(164, 199, 82, 0) 54.93%)", "linear-gradient(238.68deg, rgba(164, 199, 82, 0) 55.65%, #A4C752 98.24%)"]
     },
     {
@@ -107,26 +106,23 @@ const HowItWorks = () => {
       btnText: "4",
       borderColor: ["linear-gradient(229.97deg, #E6700B 1.28%, rgba(230, 112, 11, 0) 54.93%)", "linear-gradient(238.68deg, rgba(230, 112, 11, 0) 55.65%, #E6700B 98.24%)"]
     },
+  ];
 
-  ]
   return (
     <div>
-      <div className="max-w-7xl mx-auto mt-20">
+      <div className="max-w-7xl mx-auto mt-20 px-4">
         <div>
-          <h1 className="text-5xl font-bold text-center mb-5">
+          <h1 className="text-3xl md:text-5xl font-bold text-center mb-5">
             Your Path to <span className="text-[#ff7777]">NAPLAN</span> Success
           </h1>
-          <p className="mx-auto text-center max-w-[615px] text-xl text-[#222E48]/70 mb-10">
+          <p className="mx-auto text-center max-w-[615px] text-lg md:text-xl text-[#222E48]/70 mb-10">
             Follow these simple steps to get started with NAPLAN Prep and empower your child for their
             upcoming tests.
           </p>
         </div>
 
-        <div
-          ref={sectionRefs[0]}
-          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14"
-        >
-          <div className="flex items-center h-full w-full col-span-3">
+        <div ref={sectionRefs[0]} className="grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-12 md:gap-y-0 mb-20">
+          <div className="flex items-center h-full w-full col-span-3 order-2 md:order-1">
             <motion.div
               initial="hiddenLeft"
               animate={visibleSections.includes(0) ? "visible" : "hiddenLeft"}
@@ -135,50 +131,44 @@ const HowItWorks = () => {
               <HIWCard2 {...cardData[0]} />
             </motion.div>
           </div>
-          <div className="flex justify-end items-center col-span-2">
+          <div className="flex justify-end items-center col-span-2 px-8 md:px-0 mt-4 md:mt-0 order-1 md:order-2">
             <motion.div
               initial="hiddenRight"
               animate={visibleSections.includes(0) ? "visible" : "hiddenRight"}
               variants={animationVariants}
               transition={{ delay: 0.1 }}
             >
-              <img src={images[0].src} alt={images[0].alt} className="max-h-[550px]" />
+              <img src={images[0].src} alt={images[0].alt} className="max-w-full h-auto max-h-[550px]" />
             </motion.div>
           </div>
         </div>
 
         {/* Section 2 */}
-        <div
-          ref={sectionRefs[1]}
-          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14"
-        >
-          <div className="flex items-center col-span-2">
+        <div ref={sectionRefs[1]} className="grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-12 md:gap-y-0 mb-20">
+          <div className="flex items-center h-full w-full col-span-3 order-2 md:order-1">
             <motion.div
               initial="hiddenLeft"
               animate={visibleSections.includes(1) ? "visible" : "hiddenLeft"}
               variants={animationVariants}
             >
-              <img src={images[1].src} alt={images[1].alt} className="max-h-[550px]" />
+              <HIWCard2 {...cardData[1]} />
             </motion.div>
           </div>
-          <div className="flex items-center h-full w-full col-span-3">
+          <div className="flex justify-end items-center col-span-2 px-8 md:px-0 mt-4 md:mt-0 order-1 md:order-2">
             <motion.div
               initial="hiddenRight"
               animate={visibleSections.includes(1) ? "visible" : "hiddenRight"}
               variants={animationVariants}
               transition={{ delay: 0.1 }}
             >
-              <HIWCard2 {...cardData[1]} />
+              <img src={images[1].src} alt={images[1].alt} className="max-w-full h-auto max-h-[550px]" />
             </motion.div>
           </div>
         </div>
 
         {/* Section 3 */}
-        <div
-          ref={sectionRefs[2]}
-          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-14"
-        >
-          <div className="flex items-center h-full w-full col-span-3">
+        <div ref={sectionRefs[2]} className="grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-12 md:gap-y-0 mb-20">
+          <div className="flex items-center h-full w-full col-span-3 order-2 md:order-1">
             <motion.div
               initial="hiddenLeft"
               animate={visibleSections.includes(2) ? "visible" : "hiddenLeft"}
@@ -187,51 +177,44 @@ const HowItWorks = () => {
               <HIWCard2 {...cardData[2]} />
             </motion.div>
           </div>
-          <div className="flex justify-end items-center col-span-2">
+          <div className="flex justify-end items-center col-span-2 px-8 md:px-0 mt-4 md:mt-0 order-1 md:order-2">
             <motion.div
               initial="hiddenRight"
               animate={visibleSections.includes(2) ? "visible" : "hiddenRight"}
               variants={animationVariants}
               transition={{ delay: 0.1 }}
             >
-              <img src={images[2].src} alt={images[2].alt} className="max-h-[550px]" />
+              <img src={images[2].src} alt={images[2].alt} className="max-w-full h-auto max-h-[550px]" />
             </motion.div>
           </div>
         </div>
 
         {/* Section 4 */}
-        <div
-          ref={sectionRefs[3]}
-          className="grid grid-cols-1 md:grid-cols-5 gap-24 mb-[150px]"
-        >
-          <div className="flex items-center col-span-2">
+        <div ref={sectionRefs[3]} className="grid grid-cols-1 md:grid-cols-5 gap-y-10 md:gap-x-12 md:gap-y-0 mb-20">
+          <div className="flex items-center h-full w-full col-span-3 order-2 md:order-1">
             <motion.div
               initial="hiddenLeft"
               animate={visibleSections.includes(3) ? "visible" : "hiddenLeft"}
               variants={animationVariants}
             >
-              <img src={images[3].src} alt={images[3].alt} className="max-h-[550px]" />
+              <HIWCard2 {...cardData[3]} />
             </motion.div>
           </div>
-          <div className="flex items-center h-full w-full col-span-3">
+          <div className="flex justify-end items-center col-span-2 px-8 md:px-0 mt-4 md:mt-0 order-1 md:order-2">
             <motion.div
               initial="hiddenRight"
               animate={visibleSections.includes(3) ? "visible" : "hiddenRight"}
               variants={animationVariants}
               transition={{ delay: 0.1 }}
             >
-              <HIWCard2 {...cardData[3]} />
+              <img src={images[3].src} alt={images[3].alt} className="max-w-full h-auto max-h-[550px]" />
             </motion.div>
           </div>
         </div>
 
         <CTA imgSrc="bg-[url('/images/cta/image-2.png')]" />
-
-
-
       </div>
     </div>
-  )
-}
-
+  );
+};
 export default HowItWorks;

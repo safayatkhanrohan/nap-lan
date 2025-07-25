@@ -43,8 +43,8 @@ export default function SignupForm() {
     };
 
     return (
-        <div className="w-full p-6 px-12 rounded-[20px] bg-[#EBF5FF]/50 shadow-[0px_0px_28.2px_0px_#80B0E280_inset]">
-            <h1 className="text-4xl font-bold text-center mb-2 px-8 py-6">Create Your Account</h1>
+        <div className="w-full p-6 px-6 md:px-8 sm:px-12 rounded-[20px] bg-[#EBF5FF]/50 shadow-[0px_0px_28.2px_0px_#80B0E280_inset]">
+            <h1 className="text-3xl md:text-4xl font-bold text-center mb-2 px-8 py-6">Create Your Account</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 {/* Name field */}
                 <div className="mb-6">

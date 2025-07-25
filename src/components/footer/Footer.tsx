@@ -2,6 +2,34 @@ import { FaFacebook, FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa"
 import { FaX } from "react-icons/fa6";
 import { Link } from "react-router";
 
+const socialLinks = [
+     {
+          icon: <FaX size={14} />,
+          bgColor: "bg-gray-800 hover:bg-gray-900",
+          iconColor: "text-white",
+     },
+     {
+          icon: <FaFacebook size={14} />,
+          bgColor: "bg-blue-600 hover:bg-blue-700",
+          iconColor: "text-white",
+     },
+     {
+          icon: <FaInstagram size={14} />,
+          bgColor: "bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
+          iconColor: "text-white",
+     },
+     {
+          icon: <FaPinterest size={14} />,
+          bgColor: "bg-red-600 hover:bg-red-700",
+          iconColor: "text-white",
+     },
+     {
+          icon: <FaYoutube size={14} />,
+          bgColor: "bg-red-600 hover:bg-red-700",
+          iconColor: "text-white",
+     },
+]
+
 const Footer = () => {
      return (
           <footer className="pb-6 pt-12 px-4 sm:px-8">
@@ -96,37 +124,11 @@ const Footer = () => {
                          </div>
 
                          {/* Connect Column */}
-                         <div>
+                         <div className="col-span-2 md:col-span-1 lg:col-span-2">
                               <h3 className="font-bold text-lg text-[#222E48] mb-4">Connect</h3>
                               <div className="space-y-4">
                                    <div className="flex gap-3">
-                                        {[
-                                             {
-                                                  icon: <FaX size={14} />,
-                                                  bgColor: "bg-gray-800 hover:bg-gray-900",
-                                                  iconColor: "text-white",
-                                             },
-                                             {
-                                                  icon: <FaFacebook size={14} />,
-                                                  bgColor: "bg-blue-600 hover:bg-blue-700",
-                                                  iconColor: "text-white",
-                                             },
-                                             {
-                                                  icon: <FaInstagram size={14} />,
-                                                  bgColor: "bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
-                                                  iconColor: "text-white",
-                                             },
-                                             {
-                                                  icon: <FaPinterest size={14} />,
-                                                  bgColor: "bg-red-600 hover:bg-red-700",
-                                                  iconColor: "text-white",
-                                             },
-                                             {
-                                                  icon: <FaYoutube size={14} />,
-                                                  bgColor: "bg-red-600 hover:bg-red-700",
-                                                  iconColor: "text-white",
-                                             },
-                                        ].map((social, index) => (
+                                        {socialLinks.map((social, index) => (
                                              <Link
                                                   key={index}
                                                   to="#"
