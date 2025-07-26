@@ -1,0 +1,66 @@
+.plyr__video-wrapper {
+    background: white !important;
+}
+
+
+.plyr__control--overlaid {
+    width: 146px !important;
+    height: 146px;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0px -8px 16.5px rgba(0, 0, 0, 0.25), inset 0px 8px 13.4px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6.3px);
+}
+
+.plyr__control--overlaid:hover {
+    background: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: inset 0px -8px 16.5px rgba(0, 0, 0, 0.25), inset 0px 8px 13.4px rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(6.3px) !important;
+}
+
+.plyr__control--overlaid svg {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Tablet styles (width <= 1024px) */
+@media (max-width: 1024px) {
+    .plyr__control--overlaid {
+        width: 120px !important;
+        height: 120px;
+    }
+
+    .plyr__control--overlaid svg {
+        width: 35px !important;
+        height: 35px !important;
+    }
+}
+
+/* Mobile styles (width <= 768px) */
+@media (max-width: 768px) {
+    .plyr__control--overlaid {
+        width: 90px !important;
+        height: 90px;
+    }
+
+    .plyr__control--overlaid svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
+}
+
+/* Small mobile (width <= 480px) */
+@media (max-width: 480px) {
+    .plyr__control--overlaid {
+        width: 70px !important;
+        height: 70px;
+    }
+
+    .plyr__control--overlaid svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}

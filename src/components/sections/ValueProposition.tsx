@@ -42,7 +42,7 @@ const ValueProposition = () => {
                     <img
                          src="/images/value-img.png"
                          alt="Value Proposition"
-                         className="w-full h-auto"
+                         className="w-full h-auto object-contain"
                     />
                </motion.div>
 
