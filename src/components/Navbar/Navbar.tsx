@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { X } from "lucide-react";
 
 interface NavItem {
@@ -14,6 +14,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ mobileOpen, setMobileOpen }) => {
+     const navigate = useNavigate();
      const [activeItem, setActiveItem] = useState<string>("Home");
      const [isScrolled, setIsScrolled] = useState(false);
 
@@ -141,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ mobileOpen, setMobileOpen }) => {
                               <button
                                    onClick={() => {
                                         if (setMobileOpen) setMobileOpen(false);
-                                        // navigate to login
+                                        navigate("/login");
                                    }}
                                    className="w-full py-3 px-4 border border-[#007dfc] text-[#007dfc] rounded-lg font-medium hover:bg-[#007dfc]/10 transition-colors"
                               >
@@ -150,7 +151,7 @@ const Navbar: React.FC<NavbarProps> = ({ mobileOpen, setMobileOpen }) => {
                               <button
                                    onClick={() => {
                                         if (setMobileOpen) setMobileOpen(false);
-                                        // navigate to signup
+                                        navigate("/register");
                                    }}
                                    className="w-full py-3 px-4 bg-[#007dfc] text-white rounded-lg font-medium hover:bg-[#0069d9] transition-colors"
                               >

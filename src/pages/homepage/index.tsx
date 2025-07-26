@@ -10,7 +10,7 @@ import VideoIntro from "../../components/sections/VideoIntro"
 
 const Home = () => {
   return (
-    <div>
+    <div className="p-4 sm:p-6 md:p-8">
         <Hero />
         <VideoIntro />
         <ValueProposition />

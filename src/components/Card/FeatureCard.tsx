@@ -49,14 +49,14 @@ const FeatureCard = ({
                <img
                     src={iconSrc}
                     alt="Feature Icon"
-                    className="absolute bottom-0 right-0 h-[300px]"
+                    className="absolute bottom-0 right-0 h-[180px] sm:h-[200px] lg:h-[300px]"
                />
 
                {/* Foreground Content */}
                <div className="relative z-10 p-6 flex flex-col gap-4 justify-center h-full">
                     <div>
                          <h3 className="text-2xl font-bold mb-3">{title}</h3>
-                         <p className="text-lg text-[#222E48]/70">{description}</p>
+                         <p className="text-base lg:text-lg text-[#222E48]/70">{description}</p>
                     </div>
 
                     <div className="mt-4 flex gap-1">

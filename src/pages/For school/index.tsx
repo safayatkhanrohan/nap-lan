@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useEffect, useRef } from "react";
 import { motion, easeOut, useAnimation, useInView } from "framer-motion";
 import ButtonCircle from "../../components/button/ButtonCircle";
@@ -92,29 +91,29 @@ const ForSchool = () => {
   ];
 
   return (
-    <div>
+    <div className="p-4 sm:p-6 md:p-12">
       <motion.div
         ref={headerRef}
         variants={containerVariants}
         initial="hidden"
         animate={headerControls}
-        className="max-w-7xl mt-20 mx-auto text-center"
+        className="max-w-7xl mt-4 sm:mt-8 md:mt-10 lg-mt-12 mx-auto text-center"
       >
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[150%] px-4 sm:px-8 md:px-36"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[150%] max-w-4xl mx-auto"
         >
           Empower Your Students with <span className="text-[#ff7777]">NAPLAN</span> Prep for Schools
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className="text-[#222E48]/70 font-medium text-base sm:text-lg md:text-xl px-4 sm:px-8 md:px-64 mt-4"
+          className="text-[#222E48]/70 font-medium text-base sm:text-lg md:text-xl max-w-3xl mx-auto mt-4"
         >
           Provide your teachers and students with a comprehensive, easy-to-use platform for NAPLAN practice and progress tracking.
         </motion.p>
         <motion.div
           variants={itemVariants}
-          className="flex justify-center items-center mt-6 sm:mt-10 gap-1 mx-auto px-4"
+          className="flex justify-center items-center mt-6 sm:mt-10 gap-1 mx-auto"
         >
           <ButtonFill btnText="Request a Demo" />
           <ButtonCircle />
@@ -126,7 +125,7 @@ const ForSchool = () => {
         variants={containerVariants}
         initial="hidden"
         animate={cardsControls}
-        className="max-w-7xl mt-12 sm:mt-16 md:mt-20 mx-auto text-center px-4"
+        className="max-w-7xl mt-20 mx-auto text-center"
       >
         <motion.h2
           variants={itemVariants}
@@ -145,7 +144,7 @@ const ForSchool = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-36"
         >
           {data.map((item, index) => (
-            <motion.div key={index} variants={itemVariants}>
+            <motion.div key={index} variants={itemVariants} className="flex justify-center">
               <CurvedCard
                 bg={item.bg}
                 title={item.title}

@@ -71,7 +71,7 @@ const Header = () => {
                />
 
                {/* top header - hidden on mobile */}
-               <div className="h-[50px] w-full bg-gradient-to-l from-[rgba(0,125,252,0.25)] to-[rgba(230,112,11,0.25)] hidden md:flex items-center justify-center">
+               <div className="h-[50px] w-full bg-gradient-to-l from-[rgba(0,125,252,0.25)] to-[rgba(230,112,11,0.25)] hidden lg:flex items-center justify-center">
                     <div className="flex justify-between items-center text-[#222E48]/70 w-full max-w-[1062px] px-4 font-light">
                          <div className="flex items-center">
                               <span className="mr-2">

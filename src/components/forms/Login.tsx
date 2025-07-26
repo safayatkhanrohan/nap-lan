@@ -38,7 +38,7 @@ export default function LoginForm() {
 
     return (
         <div className="w-full p-6 px-6 sm:px-8 md:px-12 rounded-[20px] bg-[#EBF5FF]/50 shadow-[0px_0px_28.2px_0px_#80B0E280_inset]">
-            <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 p-8">Welcome to NAPMaster</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 p-5 leading-[130%]">Welcome to NAPMaster</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className='mb-6'>

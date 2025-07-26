@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 
 const Main = () => {
   return (
-    <div className="relative">
+    <div className="relative min-h-screen max-w-full overflow-clip">
         <Header />
         <Outlet />
         <Footer />

@@ -98,7 +98,7 @@ const Pricing = () => {
           },
      ];
      return (
-          <div className="max-w-[1280px] mx-auto px-4 py-12 mt-6 relative">
+          <div className="max-w-[1280px] mx-auto py-4 sm:py-6 md:py-8 lg:py-12 mt-2 md:mt-4 lg:mt-6 relative">
                <div className="w-[420px] h-[420px] rounded-full bg-[#E6700B] absolute bottom-0 -left-1/5 translate-y-1/3 -z-10 opacity-20" style={{ filter: "blur(150px)" }} />
                <motion.div
                     ref={ref}
@@ -107,7 +107,7 @@ const Pricing = () => {
                     animate={controls}
                >
                     <motion.h2
-                         className="text-5xl font-bold text-center mb-4"
+                         className="text-4xl md:text-5xl font-bold text-center mb-4"
                          variants={itemVariants}
                     >
                          Simple & <span className="text-[#FF7777]">Transparent</span> Pricing
@@ -132,7 +132,7 @@ const Pricing = () => {
                          1024: { slidesPerView: 3 },
                     }}>
                     {pricingPlans.map((plan) => (
-                         <SwiperSlide key={plan.id}>
+                         <SwiperSlide key={plan.id} className="p-1">
                               <div className="max-w-[95%] mx-auto">
                                    <PricingCard
                                         color={plan.color}

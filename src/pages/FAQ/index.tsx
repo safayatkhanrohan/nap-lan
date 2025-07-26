@@ -1,13 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import AccordionUsage from "../../components/ui/accordion/Accordion"
 import { easeOut, useAnimation, useInView, motion } from "framer-motion";
 import CTA from "../../components/sections/CTA";
 
 const FAQ = () => {
-
+  const [expandedIndex, setExpandedIndex] = useState<number | false>(0);
   const controls = useAnimation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+
 
   useEffect(() => {
     if (inView) {
@@ -23,6 +25,11 @@ const FAQ = () => {
       },
     },
   };
+
+  const handleChange = (index: number) =>
+    (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpandedIndex(isExpanded ? index : false);
+    };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -64,25 +71,26 @@ const FAQ = () => {
 
   ]
   return (
-    <div>
-      <div className="mt-26 max-w-7xl mx-auto mb-36">
+    <div className="p-4 sm:p-6 md:p-12">
+      <div className="mt-8 sm:mt-12 md:mt-20 max-w-7xl mx-auto mb-36">
         <motion.div className="mb-18 text-center" ref={ref} variants={containerVariants} initial="hidden" animate={controls}>
-          <motion.h1 variants={itemVariants} className="text-5xl font-bold text-center mb-6">100% Money Back <span className="text-[#FF7777]">Satisfaction Guarantee</span></motion.h1>
+          <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-center mb-6">100% Money Back <span className="text-[#FF7777]">Satisfaction Guarantee</span></motion.h1>
           <motion.p variants={itemVariants} className="max-w-3xl mx-auto font-medium text-xl leading-[165%] text-[#222E48]/70">Find answers to the most common questions about NAPLAN Prep, our platform, and how we
             can help your child succeed.</motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-12">
-          <div className="col-span-2 md:col-span-5">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 md:gap-8">
+          <div className="col-span-2 lg:col-span-5 flex justify-center md:justify-start items-center">
             <img src="/images/faq/1.png" alt="FAQ Image 1" className="max-h-[600px]" />
           </div>
-          <div className="col-span-2 md:col-span-7">
+          <div className="col-span-2 lg:col-span-7">
             {faqs.map((faq, index) => (
               <AccordionUsage
                 key={index}
                 title={faq.question}
                 content={faq.answer}
-                index={index}
+                expanded={expandedIndex === index}
+                onChange={handleChange(index)}
               />
             ))}
           </div>
@@ -91,7 +99,7 @@ const FAQ = () => {
 
       <CTA imgSrc="bg-[url('/images/cta/image-3.png')]" />
     </div>
-    
+
   )
 }
 

@@ -91,7 +91,7 @@ const HowItWorks = () => {
                     className="flex flex-col md:flex-row gap-8 md:justify-between"
                >
                     <motion.h2
-                         className="text-5xl font-bold mb-5 -ml-[30px]"
+                         className="text-4xl md:text-5xl font-bold mb-5 -ml-[30px]"
                          variants={itemVariants}
                     >
                          How it <span className="text-[#FF7777]">works</span>

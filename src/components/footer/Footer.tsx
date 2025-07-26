@@ -35,39 +35,39 @@ const Footer = () => {
           <footer className="pb-6 pt-12 px-4 sm:px-8">
                <div className="max-w-7xl mx-auto">
                     {/* Columns */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8 text-base md:text-lg">
                          {/* Company Column */}
                          <div>
                               <div className="mb-10">
                                    <div className="mb-4">
-                                        <img src="/logo.png" alt="Logo" className="h-11 mb-2" />
+                                        <img src="/logo.png" alt="Logo" className="h-8 md:h-11 mb-2" />
                                    </div>
-                                   <p className="text-[#222E48]/70 text-lg">
+                                   <p className="text-[#222E48]/70 ">
                                         Your partner in NAPLAN success.
                                    </p>
                               </div>
                          </div>
                          <div>
-                              <h3 className="font-bold text-lg text-[#222E48] mb-4">Company</h3>
+                              <h3 className="font-bold  text-[#222E48] mb-4">Company</h3>
                               <ul className="space-y-2">
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              About us
                                         </Link>
                                    </li>
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              Contact
                                         </Link>
                                    </li>
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              Careers
                                         </Link>
                                    </li>
@@ -76,26 +76,26 @@ const Footer = () => {
 
                          {/* Resources Column */}
                          <div>
-                              <h3 className="font-bold text-lg text-[#222E48] mb-4">Resources</h3>
+                              <h3 className="font-bold  text-[#222E48] mb-4">Resources</h3>
                               <ul className="space-y-2">
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              How it works
                                         </Link>
                                    </li>
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              FAQ
                                         </Link>
                                    </li>
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              Past Paper
                                         </Link>
                                    </li>
@@ -104,19 +104,19 @@ const Footer = () => {
 
                          {/* Others Column */}
                          <div>
-                              <h3 className="font-bold text-lg text-[#222E48] mb-4">Others</h3>
+                              <h3 className="font-bold  text-[#222E48] mb-4">Others</h3>
                               <ul className="space-y-2">
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              Privacy policy
                                         </Link>
                                    </li>
                                    <li>
                                         <Link
                                              to="#"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200">
                                              Terms of service
                                         </Link>
                                    </li>
@@ -124,10 +124,10 @@ const Footer = () => {
                          </div>
 
                          {/* Connect Column */}
-                         <div className="col-span-2 md:col-span-1 lg:col-span-2">
-                              <h3 className="font-bold text-lg text-[#222E48] mb-4">Connect</h3>
+                         <div className="col-span-2 md:col-span-1">
+                              <h3 className="font-bold  text-[#222E48] mb-4">Connect</h3>
                               <div className="space-y-4">
-                                   <div className="flex gap-3">
+                                   <div className="flex gap-2">
                                         {socialLinks.map((social, index) => (
                                              <Link
                                                   key={index}
@@ -140,14 +140,14 @@ const Footer = () => {
                                    <div>
                                         <a
                                              href="mailto:info@naplanprep.com"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200 block">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200 block">
                                              info@naplanprep.com
                                         </a>
                                    </div>
                                    <div>
                                         <a
                                              href="tel:+61123456789"
-                                             className="text-lg text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200 block">
+                                             className=" text-[#222E48]/70 hover:text-[#007DFC] transition-colors duration-200 block">
                                              +61 123 456 789
                                         </a>
                                    </div>

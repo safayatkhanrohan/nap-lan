@@ -58,8 +58,8 @@ const Testimonials = () => {
      ];
 
      return (
-          <div className="w-full mx-auto px-4 py-6 mt-10 mb-20">
-               <h2 className="text-center text-5xl font-bold mb-8 capitalize">
+          <div className="py-6 mt-10 mb-20">
+               <h2 className="text-center text-4xl md:text-5xl font-bold mb-8 capitalize">
                     What parents <span className="text-[#FF7777]">are saying</span>
                </h2>
                <div className="testimonials py-6">
@@ -83,7 +83,7 @@ const Testimonials = () => {
                     >
                          {testimonials.map((testimonial) => (
                               <SwiperSlide key={testimonial.id}>
-                                   <div className="max-w-[95%] mx-auto h-full">
+                                   <div className="max-w-[95%] h-full mx-auto">
                                         <TestimonialCard
                                              author={testimonial.author}
                                              content={testimonial.content}

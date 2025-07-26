@@ -31,13 +31,13 @@ const ValueProposition = () => {
                initial="hidden"
                animate={inView ? "show" : "hidden"}
                variants={container}
-               className="grid grid-cols-12 max-w-[1280px] mx-auto px-6 py-12 mt-[100px] gap-8 relative"
+               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 max-w-[1280px] mx-auto px-6 py-12 mt-[100px] gap-8 relative"
           >
-               <div className="w-[420px] h-[420px] rounded-full bg-[#007dfc] absolute top-0 -left-1/5 -z-10 opacity-80" style={{filter: "blur(250px)"}}/>
-               <div className="w-[420px] h-[420px] rounded-full bg-[#2AF595] absolute bottom-0 -right-1/5 translate-y-1/3 -z-10 opacity-30" style={{filter: "blur(250px)"}}/>
+               <div className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#007dfc] absolute top-0 left-0 md:left-[-10%] lg:left-[-20%] -z-10 opacity-80" style={{ filter: "blur(250px)" }} />
+               <div className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[420px] lg:h-[420px] rounded-full bg-[#2AF595] absolute bottom-0 right-0 md:right-[-10%] lg:right-[-20%] translate-y-1/3 -z-10 opacity-30" style={{ filter: "blur(250px)" }} />
                <motion.div
                     variants={item}
-                    className="col-span-5 flex justify-center"
+                    className="col-span-1 lg:col-span-5 flex justify-center"
                >
                     <img
                          src="/images/value-img.png"
@@ -48,12 +48,12 @@ const ValueProposition = () => {
 
                <motion.div
                     variants={item}
-                    className="col-span-5 flex items-center justify-end ml-4"
+                    className="col-span-1 lg:col-span-5 flex items-center justify-end lg:ml-4"
                >
                     <div>
                          <motion.h2
                               variants={item}
-                              className="text-5xl font-bold leading-[130%] mb-4"
+                              className="text-4xl md:text-5xl font-bold leading-[130%] mb-4"
                          >
                               <span className="text-[#FF7777]">Reports that show</span> <br /> your
                               child's <br />
@@ -93,12 +93,12 @@ const ValueProposition = () => {
 
                <motion.div
                     variants={item}
-                    className="flex items-end col-span-2"
+                    className="col-span-1 md:col-span-2 lg:col-span-2 flex items-end justify-center"
                >
                     <img
                          src="/images/value-img-2.png"
                          alt="Value Proposition 2"
-                         className="w-[240px] h-auto"
+                         className="max-w-[240px] w-full h-auto"
                     />
                </motion.div>
           </motion.section>

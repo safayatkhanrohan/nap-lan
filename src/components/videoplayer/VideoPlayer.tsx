@@ -216,7 +216,7 @@ const VideoPlayer = () => {
 
                <div
                     ref={containerRef}
-                    className="max-w-[1060px] mx-auto bg-gray-900 rounded-xl overflow-hidden shadow-2xl"
+                    className="w-full max-w-[1060px] mx-auto bg-gray-900 rounded-xl overflow-hidden shadow-2xl"
                >
                     <div className="relative group">
                          {/* Video container */}
@@ -273,7 +273,7 @@ const VideoPlayer = () => {
                                         {/* Play/Pause button - Touch-friendly */}
                                         <button
                                              onClick={togglePlay}
-                                             className="text-white w-11 h-11 flex items-center justify-center"
+                                             className="text-white w-12 h-12 md:w-11 md:h-11 flex items-center justify-center"
                                         >
                                              {isPlaying ? (
                                                   <svg
@@ -308,7 +308,7 @@ const VideoPlayer = () => {
                                         <div className="flex items-center space-x-2">
                                              <button
                                                   onClick={toggleMute}
-                                                  className="text-white w-11 h-11 flex items-center justify-center"
+                                                  className="text-white w-12 h-12 md:w-11 md:h-11 flex items-center justify-center"
                                              >
                                                   {isMuted || volume === 0 ? (
                                                        <svg
@@ -357,7 +357,7 @@ const VideoPlayer = () => {
                                    {/* Fullscreen button - Touch-friendly */}
                                    <button
                                         onClick={toggleFullscreen}
-                                        className="text-white w-11 h-11 flex items-center justify-center"
+                                        className="text-white w-12 h-12 md:w-11 md:h-11 flex items-center justify-center"
                                    >
                                         {isFullscreen ? (
                                              <svg

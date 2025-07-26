@@ -3,7 +3,7 @@ import Pricing from "../../components/sections/Pricing"
 
 const PricingPlan = () => {
   return (
-    <div className="pt-10">
+    <div className="p-4 sm:p-6 md:p-8">
       <Pricing />
       <div className="mb-20"></div>
       <CTA imgSrc="bg-[url('/images/cta/image-3.png')]" />
