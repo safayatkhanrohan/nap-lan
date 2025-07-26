@@ -27,7 +27,7 @@ const FAQ = () => {
   };
 
   const handleChange = (index: number) =>
-    (event: React.SyntheticEvent, isExpanded: boolean) => {
+    (_event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpandedIndex(isExpanded ? index : false);
     };
 
