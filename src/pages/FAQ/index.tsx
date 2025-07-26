@@ -75,7 +75,7 @@ const FAQ = () => {
       <div className="mt-8 sm:mt-12 md:mt-20 max-w-7xl mx-auto mb-36">
         <motion.div className="mb-18 text-center" ref={ref} variants={containerVariants} initial="hidden" animate={controls}>
           <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-center mb-6">100% Money Back <span className="text-[#FF7777]">Satisfaction Guarantee</span></motion.h1>
-          <motion.p variants={itemVariants} className="max-w-3xl mx-auto font-medium text-xl leading-[165%] text-[#222E48]/70">Find answers to the most common questions about NAPLAN Prep, our platform, and how we
+          <motion.p variants={itemVariants} className="max-w-3xl mx-auto font-medium text-base md:text-xl leading-[165%] text-[#222E48]/70">Find answers to the most common questions about NAPLAN Prep, our platform, and how we
             can help your child succeed.</motion.p>
         </motion.div>
 
