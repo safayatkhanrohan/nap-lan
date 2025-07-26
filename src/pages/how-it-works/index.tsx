@@ -212,7 +212,7 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <CTA imgSrc="bg-[url('/images/cta/image-2.png')]" />
+        <CTA imgSrc='/images/cta/image-2.png'/>
       </div>
     </div>
   );

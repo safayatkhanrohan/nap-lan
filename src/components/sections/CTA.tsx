@@ -4,7 +4,7 @@ import ButtonFill from "../button/ButtonFill";
 const CTA = ({ imgSrc = '/images/cta/image.png' }) => {
      return (
           <div className="text-white bg-[#A15BA8] max-w-7xl mx-auto px-0 sm:px-6 xl:px-16 rounded-4xl h-fit md:h-[300px] lg:h-[450px] mb-20">
-               <div className="flex flex-col md:flex-row-reverse h-full justify-between">
+               <div className="flex flex-col md:flex-row-reverse h-full justify-between items-center md:items-start">
                     <img src={imgSrc} alt="CTA Image" className="md:h-[350px] lg:h-[530px] relative object-contain z-50 -mt-22 md:-mt-10 lg:-mt-18" />
                     <div className="mt-8 md:mt-12 lg:mt-18 relative max-w-[560px] mb-10 md:mb-0 px-8">
                          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-[130%] mb-8">

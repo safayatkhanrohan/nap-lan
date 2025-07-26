@@ -163,7 +163,7 @@ const ForSchool = () => {
         initial="hidden"
         animate={ctaControls}
       >
-        <CTA imgSrc="bg-[url('/images/for-school/cta.png')]" />
+        <CTA imgSrc='/images/for-school/cta.png'/>
       </motion.div>
     </div>
   );
