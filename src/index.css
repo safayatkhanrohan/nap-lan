@@ -42,6 +42,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 60px;
+    overflow-y: visible !important;
 }
 
 .gradient-border {
