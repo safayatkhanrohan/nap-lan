@@ -42,7 +42,7 @@ const HowItWorks = () => {
                imageSrc: "/images/howitworks/1.png",
                imgBg: "bg-[#A15BA8]",
                btnCls: "bg-[#E6700B]",
-               position: "md:mt-[185px] md:-ml-[30px]"
+               position: "xl:mt-[185px] -ml-[30px]"
           },
           {
                id: 2,
@@ -51,7 +51,7 @@ const HowItWorks = () => {
                imageSrc: "/images/howitworks/2.png",
                imgBg: "bg-[#23D581]",
                btnVariant: "blue",
-               position: "md:mt-[148px] md:-ml-[30px]"
+               position: "xl:mt-[148px] md:-ml-[30px]"
           },
           {
                id: 3,
@@ -61,7 +61,7 @@ const HowItWorks = () => {
                imgBg: "bg-[#E6700B]",
                btnVariant: "yellow",
                btnCls: "bg-[#F0C20A]",
-               position: "md:mt-[228px] md:-ml-[30px]"
+               position: "xl:mt-[228px] md:-ml-[30px]"
           },
           {
                id: 4,
@@ -71,13 +71,13 @@ const HowItWorks = () => {
                imgBg: "bg-[#8056FF]",
                btnVariant: "red",
                btnCls: "bg-[#FF7777]",
-               position: "md:mt-[48px] md:-ml-[30px]"
+               position: "xl:mt-[48px] md:-ml-[30px]"
           },
      ];
 
      return (
-          <div className="max-w-7xl h-auto md:h-[745px] mx-auto px-6 relative mb-16 mt-24">
-               <div className="hidden md:block w-[480px] h-[480px] rounded-full bg-[#007DFC] absolute top-0 -right-1/5 -translate-y-1/3 -z-10 opacity-20" style={{ filter: "blur(150px)" }} />
+          <div className="max-w-7xl h-[745px] mx-auto px-6 relative mb-16 mt-24">
+               <div className="w-[480px] h-[480px] rounded-full bg-[#007DFC] absolute top-0 -right-1/5 -translate-y-1/3 -z-10 opacity-20" style={{ filter: "blur(150px)" }} />
                <img
                     src="/images/hiw-banner.png"
                     alt="How It Works Banner"
@@ -88,7 +88,6 @@ const HowItWorks = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate={controls}
-                    className="flex flex-col md:flex-row gap-8 md:justify-between"
                >
                     <motion.h2
                          className="text-4xl md:text-5xl font-bold mb-5 -ml-[30px]"
