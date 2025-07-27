@@ -1,7 +1,9 @@
 import { backOut, easeInOut, motion } from "framer-motion";
+import CountUp from 'react-countup';
 import ButtonFill from "../button/ButtonFill";
 import ButtonOutline from "../button/ButtonOutline";
 import ButtonCircle from "../button/ButtonCircle";
+const animBgsrc = "https://res.cloudinary.com/dghzuk2uk/image/upload/v1752362661/br-Uploads/klo5hvdnj4kfccwqhkxo.webp";
 
 const Hero = () => {
      const containerVariants = {
@@ -55,7 +57,7 @@ const Hero = () => {
 
      return (
           <motion.section
-               className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center py-6 sm:py-8 md:py-12 overflow-x-clip"
+               className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center py-6 sm:py-8 md:py-12 mt-20"
                initial="hidden"
                animate="visible"
                variants={containerVariants}
@@ -130,55 +132,57 @@ const Hero = () => {
 
                {/* Right Section */}
                <motion.div
-                    className="flex items-center justify-center md:justify-end order-1 md:order-2 relative"
+                    className="flex items-center justify-center md:justify-end order-1 md:order-2 relative border"
                     variants={imageVariants}
                >
-                    <div className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[480px] h-[280px] sm:h-[360px] md:h-[400px] lg:h-[480px] xl:h-[560px] relative">
+                    <div className="w-full max-w-[630px] relative flex justify-center items-center border">
                          <img
                               src="/images/hero-img.webp"
                               alt="Happy student learning"
-                              className="h-full w-full object-cover rounded-lg"
+                              className="w-full object-contain -mt-24 z-1 -ml-10"
                          />
                          <img
-                              src="https://res.cloudinary.com/dghzuk2uk/image/upload/v1752362661/br-Uploads/klo5hvdnj4kfccwqhkxo.webp"
+                              src={animBgsrc}
                               alt="Animated background"
-                              className="absolute w-full -bottom-12 sm:-bottom-14 md:-bottom-16 lg:-bottom-20 xl:-bottom-[82px] -z-5"
+                              className="w-3/4 absolute -bottom-1 left-1/2 -translate-x-1/2 translate-y-1/6 z-0 -ml-4"
                          />
-                         <div className="absolute flex items-center gap-2 sm:gap-3 md:gap-4 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[230px] min-h-[60px] sm:min-h-[80px] md:min-h-[90px] lg:min-h-[100px] xl:min-h-[110px] right-0 top-[80px] sm:top-[120px] md:top-[140px] lg:top-[160px] xl:top-[180px] md:translate-x-1/4 lg:translate-x-1/3 xl:translate-x-1/2 rounded-[16px] sm:rounded-[20px] bg-white shadow-[12px_20px_30px_rgba(4,65,36,0.1)] p-3 sm:p-4 md:p-5 lg:p-6">
-                              <div className="w-10 sm:w-12 md:w-14 lg:w-16 h-10 sm:h-12 md:h-14 lg:h-16 bg-[#F7AEFF] rounded-lg shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] hidden sm:flex items-center justify-center">
+                         {/* First Card */}
+                         <div className="absolute top-[5%] right-0 sm:top-[6%] md:top-[8%] lg:top-[10%] xl:top-[12%] flex items-center gap-1.5 sm:gap-4 w-[140px] xs:w-[200px] sm:w-[210px] md:w-[220px] lg:w-[240px] h-[65px] xs:h-[100px] sm:h-[105px] md:h-[110px] lg:h-[120px] rounded-2xl bg-white shadow-[8px_12px_20px_rgba(4,65,36,0.1)] p-2 sm:pl-5 z-10">
+                              <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-[#F7AEFF] rounded-lg shadow-[inset_0px_-3px_3px_rgba(0,0,0,0.2),inset_0px_3px_3px_rgba(255,255,255,0.4)] flex items-center justify-center">
                                    <img
                                         src="/images/hero-icon-1.png"
                                         alt="Hero Icon"
-                                        className="w-6 sm:w-8 md:w-10 lg:w-12 h-6 sm:h-8 md:h-10 lg:h-12"
+                                        className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-10 xl:h-10"
                                    />
                               </div>
-                              <div>
-                                   <span className="text-xl sm:text-2xl md:text-2.5xl lg:text-3xl text-[#E0B50B] font-bold">
-                                        250K
+                              <div className="text-nowrap">
+                                   <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#E0B50B] font-bold block">
+                                        <CountUp end={250} duration={3} suffix="K" />
                                    </span>
-                                   <br /> Practice tests
+                                   <span className="text-sm sm:text-base md:text-lg lg:text-xl relative block">Practice tests</span>
                               </div>
                          </div>
 
-                         <div className="absolute flex items-center gap-2 sm:gap-3 md:gap-4 w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] xl:w-[230px] h-[60px] sm:h-[80px] md:h-[90px] lg:h-[100px] xl:h-[110px] -left-4 sm:-left-6 md:-left-8 lg:-left-10 xl:-left-12 bottom-0 translate-y-1 sm:translate-y-2 md:translate-y-3 rounded-[16px] sm:rounded-[20px] bg-white shadow-[12px_20px_30px_rgba(4,65,36,0.1)]">
-                              <div className="relative w-full h-full p-3 sm:p-4 md:p-5 lg:p-6">
-                                   <div className="absolute w-8 sm:w-10 md:w-12 lg:w-14 h-8 sm:h-10 md:h-12 lg:h-14 top-0 left-0 -translate-x-1/4 -translate-y-1/4 bg-[#FFA558] shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_0px_4px_rgba(255,255,255,0.5)] rounded-full hidden sm:flex items-center justify-center">
+                         {/* Second Card */}
+                         <div className="absolute -bottom-[7%] left-2 sm:bottom-[6%] sm:left-[6%] md:bottom-[8%] md:left-[8%] flex items-center gap-1 sm:gap-4 w-[120px] xs:w-[170px] sm:w-[180px] md:w-[190px] lg:w-[200px] h-[65px] xs:h-[85px] sm:h-[90px] md:h-[95px] lg:h-[100px] rounded-2xl bg-white shadow-[8px_12px_20px_rgba(4,65,36,0.1)] z-10">
+                              <div className="relative w-full h-full p-3 sm:p-4">
+                                   <div className="absolute w-7 h-7 xs:w-13 xs:h-13 sm:w-14 sm:h-14 md:w-16 md:h-16 top-0 left-0 -translate-x-1/3 -translate-y-1/3 bg-[#FFA558] shadow-[inset_0px_-3px_3px_rgba(0,0,0,0.2),inset_0px_0px_3px_rgba(255,255,255,0.4)] rounded-full flex items-center justify-center">
                                         <img
                                              src="/images/hero-icon-4.png"
                                              alt="Hero Icon"
-                                             className="w-4 sm:w-5 md:w-6 lg:w-7 h-4 sm:h-5 md:h-6 lg:h-7"
+                                             className="w-3 xs:w-4 sm:w-5 md:w-6 lg:w-7 h-3 xs:h-4 sm:h-5 md:h-6 lg:h-7"
                                         />
                                    </div>
-                                   <div className="ml-5 sm:ml-6 md:ml-7 lg:ml-8">
-                                        <span className="text-xl sm:text-2xl md:text-2.5xl lg:text-3xl text-[#1AA249] font-bold">
-                                             150K
+                                   <div className="ml-0 sm:ml-8 md:ml-9 text-nowrap">
+                                        <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#1AA249] font-bold block">
+                                             <CountUp end={150} duration={3} suffix="K" />
                                         </span>
-                                        <br /> Active students
+                                        <span className="text-sm sm:text-base md:text-lg lg:text-xl block">Active students</span>
                                    </div>
                               </div>
                          </div>
 
-                         <div className="absolute w-12 sm:w-14 md:w-16 lg:w-20 h-12 sm:h-14 md:h-16 lg:h-20 bg-white rounded-full left-1/2 translate-x-1/2 -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-14 flex items-center justify-center shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)]">
+                         <div className="absolute w-12 sm:w-14 md:w-16 lg:w-20 h-12 sm:h-14 md:h-16 lg:h-20 bg-white rounded-full left-1/2  -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-14 flex items-center justify-center shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] z-1">
                               <img
                                    src="/images/hero-icon-2.png"
                                    alt="Hero Icon"
@@ -186,11 +190,11 @@ const Hero = () => {
                               />
                          </div>
 
-                         <img
+                         {/* <img
                               src="/images/hero-icon-3.png"
                               alt="Hero Icon"
                               className="absolute w-12 sm:w-14 md:w-16 lg:w-20 h-12 sm:h-14 md:h-16 lg:h-20 right-0 top-10 sm:top-12 md:top-14 lg:top-16 xl:top-18 rotate-15"
-                         />
+                         /> */}
                     </div>
                     <div
                          className="absolute w-[200px] sm:w-[300px] md:w-[400px] lg:w-[450px] xl:w-[500px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[450px] xl:h-[500px] left-0 top-0 -z-10 bg-[#2AF595] opacity-10 sm:opacity-15 md:opacity-20 blur-[80px] sm:blur-[100px] md:blur-[120px] lg:blur-[150px] xl:blur-[180px]"
