@@ -144,49 +144,49 @@ const Hero = () => {
                          <img
                               src={animBgsrc}
                               alt="Animated background"
-                              className="w-3/4 absolute -bottom-1 left-1/2 -translate-x-1/2 translate-y-1/6 z-0 -ml-4"
+                              className="w-3/4 absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/6 z-0 -ml-4"
                          />
                          {/* First Card */}
-                         <div className="absolute top-[5%] right-0 sm:top-[6%] md:top-[8%] lg:top-[10%] xl:top-[12%] flex items-center gap-1.5 sm:gap-4 w-[140px] xs:w-[200px] sm:w-[210px] md:w-[220px] lg:w-[240px] h-[65px] xs:h-[100px] sm:h-[105px] md:h-[110px] lg:h-[120px] rounded-2xl bg-white shadow-[8px_12px_20px_rgba(4,65,36,0.1)] p-2 sm:pl-5 z-10">
-                              <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 xl:w-14 xl:h-14 bg-[#F7AEFF] rounded-lg shadow-[inset_0px_-3px_3px_rgba(0,0,0,0.2),inset_0px_3px_3px_rgba(255,255,255,0.4)] flex items-center justify-center">
+                         <div className="absolute top-[5%] right-0 sm:right-2 md:right-0 sm:top-[20%] md:top-[8%] lg:top-[18%] xl:top-[18%] flex items-center gap-1.5 sm:gap-4 md:gap-1.5 lg:gap-4 w-[140px] sm:w-[200px] md:w-[140px] lg:w-[180px] xl:w-[220px] h-[65px] sm:h-[90px] md:h-[70px] lg:h-[90px] xl:h-[100px] rounded-2xl bg-white shadow-[8px_12px_20px_rgba(4,65,36,0.1)] p-2 sm:p-4 md:p-2 lg:p-3 z-10 xl:p-4">
+                              <div className="w-8 h-8 sm:w-11 sm:h-11 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-14 xl:h-14 bg-[#F7AEFF] rounded-lg shadow-[inset_0px_-3px_3px_rgba(0,0,0,0.2),inset_0px_3px_3px_rgba(255,255,255,0.4)] flex items-center justify-center">
                                    <img
                                         src="/images/hero-icon-1.png"
                                         alt="Hero Icon"
-                                        className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 xl:w-10 xl:h-10"
+                                        className="w-5 h-5 sm:w-7 sm:h-7 md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-10 xl:h-10"
                                    />
                               </div>
                               <div className="text-nowrap">
-                                   <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#E0B50B] font-bold block">
+                                   <span className="text-base sm:text-lg md:text-base lg:text-xl xl:text-3xl text-[#E0B50B] font-bold block">
                                         <CountUp end={250} duration={3} suffix="K" />
                                    </span>
-                                   <span className="text-sm sm:text-base md:text-lg lg:text-xl relative block">Practice tests</span>
+                                   <span className="text-sm sm:text-base md:text-sm lg:text-base xl:text-lg relative block">Practice tests</span>
                               </div>
                          </div>
 
                          {/* Second Card */}
-                         <div className="absolute -bottom-[7%] left-2 sm:bottom-[6%] sm:left-[6%] md:bottom-[8%] md:left-[8%] flex items-center gap-1 sm:gap-4 w-[120px] xs:w-[170px] sm:w-[180px] md:w-[190px] lg:w-[200px] h-[65px] xs:h-[85px] sm:h-[90px] md:h-[95px] lg:h-[100px] rounded-2xl bg-white shadow-[8px_12px_20px_rgba(4,65,36,0.1)] z-10">
-                              <div className="relative w-full h-full p-3 sm:p-4">
-                                   <div className="absolute w-7 h-7 xs:w-13 xs:h-13 sm:w-14 sm:h-14 md:w-16 md:h-16 top-0 left-0 -translate-x-1/3 -translate-y-1/3 bg-[#FFA558] shadow-[inset_0px_-3px_3px_rgba(0,0,0,0.2),inset_0px_0px_3px_rgba(255,255,255,0.4)] rounded-full flex items-center justify-center">
+                         <div className="absolute -bottom-[7%] left-2 -sm:bottom-[6%] sm:left-[12%] md:left-[8%] xl:left-[8%] flex items-center w-[130px] sm:w-[165px] md:w-[120px] lg:w-[170px] xl:w-[200px] h-[65px] sm:h-[90px] md:h-[70px] lg:h-[90px] rounded-2xl bg-white shadow-[8px_12px_20px_rgba(4,65,36,0.1)] z-10">
+                              <div className="relative w-full h-full p-3 sm:p-4 md:p-3">
+                                   <div className="absolute w-7 h-7 sm:w-12 sm:h-12 md:w-7 md:h-7 lg:w-12 lg:h-12 top-0 left-0 -translate-x-1/3 -translate-y-1/3 bg-[#FFA558] shadow-[inset_0px_-3px_3px_rgba(0,0,0,0.2),inset_0px_0px_3px_rgba(255,255,255,0.4)] rounded-full flex items-center justify-center">
                                         <img
                                              src="/images/hero-icon-4.png"
                                              alt="Hero Icon"
-                                             className="w-3 xs:w-4 sm:w-5 md:w-6 lg:w-7 h-3 xs:h-4 sm:h-5 md:h-6 lg:h-7"
+                                             className="w-3 sm:w-6 md:w-3 lg:w-7 h-3 sm:h-6 md:h-3 lg:h-7"
                                         />
                                    </div>
-                                   <div className="ml-0 sm:ml-8 md:ml-9 text-nowrap">
-                                        <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#1AA249] font-bold block">
+                                   <div className="ml-0 sm:ml-4 md:ml-0 lg:ml-6 xl-ml-8 text-nowrap h-full flex flex-col justify-center">
+                                        <span className="text-base sm:text-lg md:text-base lg:text-xl xl:text-3xl text-[#1AA249] font-bold block">
                                              <CountUp end={150} duration={3} suffix="K" />
                                         </span>
-                                        <span className="text-sm sm:text-base md:text-lg lg:text-xl block">Active students</span>
+                                        <span className="text-sm sm:text-base md:text-sm lg:text-base xl:text-lg block">Active students</span>
                                    </div>
                               </div>
                          </div>
 
-                         <div className="absolute w-12 sm:w-14 md:w-16 lg:w-20 h-12 sm:h-14 md:h-16 lg:h-20 bg-white rounded-full left-1/2  -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-14 flex items-center justify-center shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] z-1">
+                         <div className="absolute w-12 sm:w-14 md:w-12 lg:w-16 xl:w-20 h-12 sm:h-14 md:h-12 lg:h-16 xl:h-20 bg-white rounded-full left-1/2  -bottom-8 sm:-bottom-10 md:-bottom-8 lg:-bottom-11 flex items-center justify-center shadow-[inset_0px_-4px_4px_rgba(0,0,0,0.25),inset_0px_4px_4px_rgba(255,255,255,0.5)] z-1">
                               <img
                                    src="/images/hero-icon-2.png"
                                    alt="Hero Icon"
-                                   className="w-8 sm:w-10 md:w-10 lg:w-12"
+                                   className="w-8 sm:w-10 md:w-8 lg:w-12"
                               />
                          </div>
 
