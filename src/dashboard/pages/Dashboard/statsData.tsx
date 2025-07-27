@@ -6,6 +6,10 @@ export const statsData = [
     info: "Total tests finished",
     color: "#A4C752",
     bgColor: "#A4C7521A",
+    borderColor: [
+      "circle at top right, #A4C752 0%, #A4C75200 60%",
+      "circle at bottom left, #A4C752 0%, #A4C75200 60%",
+    ],
   },
   {
     title: "Best Score",
@@ -14,6 +18,10 @@ export const statsData = [
     info: "Highest test score",
     color: "#E6700B",
     bgColor: "#E6700B1A",
+    borderColor: [
+      "circle at top right, #E6700B 0%, #E6700B00 60%",
+      "circle at bottom left, #E6700B 0%, #E6700B00 60%",
+    ],
   },
   {
     title: "Average Time",
@@ -22,6 +30,10 @@ export const statsData = [
     info: "Average per test",
     color: "#A15BA8",
     bgColor: "#A15BA81A",
+    borderColor: [
+      "circle at top right, #A15BA8 0%, #A15BA800 60%",
+      "circle at bottom left, #A15BA8 0%, #A15BA800 60%",
+    ],
   },
 ];
 

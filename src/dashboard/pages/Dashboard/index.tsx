@@ -16,30 +16,46 @@ const Dashboard = () => {
           Your NAPLAN Progress Overview
         </p>
       </div>
-      <div className="mt-[50px]">
-        <Title>Quick Stats</Title>
-        <div className="mt-6 grid grid-cols-3 gap-5">
-          {statsData.map(({ color, icon, info, number, title, bgColor }) => (
-            <div
-              key={title}
-              style={{ backgroundColor: `${bgColor}` }}
-              className={`p-5 rounded-[20px] relative after:absolute after:top-0 after:left-0 after:border-2 after:h-full after:w-full after:rounded-[20px]`}
-            >
+      <div className="mt-[50px] max-w-[730px]">
+        <div>
+          <Title>Quick Stats</Title>
+          <div className="mt-6 grid grid-cols-3 gap-5">
+            {statsData.map(({ color, icon, info, number, title, bgColor, borderColor }) => (
               <div
-                style={{ backgroundColor: `${color}` }}
-                className="w-[59px] h-[59px] flex justify-center items-center rounded-full shadow-[0_-4px_4px_0_rgba(0,0,0,0.15)_inset,_0_4px_4px_0_rgba(255,255,255,0.50)_inset]"
+                key={title}
+                className={`full-border-gradient rounded-[20px] p-0.5`}
+                style={{ "--border-color1": borderColor[0], "--border-color2": borderColor[1] } as React.CSSProperties}
               >
-                {icon}
+                <div className="bg-[#F7F8F9] rounded-[18px]">
+                  <div
+                    style={{ backgroundColor: `${bgColor}` }}
+                    className="p-5 rounded-[18px] "
+                  >
+                    <div
+                      style={{ backgroundColor: `${color}` }}
+                      className="w-[59px] h-[59px] flex justify-center items-center rounded-full shadow-[0_-4px_4px_0_rgba(0,0,0,0.15)_inset,_0_4px_4px_0_rgba(255,255,255,0.50)_inset]"
+                    >
+                      {icon}
+                    </div>
+                    <div className="space-y-2.5 mt-6">
+                      <p
+                        style={{ color: color }}
+                        className="text-sm font-semibold"
+                      >
+                        {title}
+                      </p>
+                      <p className="text-lg font-semibold text-[#222E48]">
+                        {number}
+                      </p>
+                      <p className="text-sm font-semibold text-[#222E4880]">
+                        {info}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-2.5 mt-6">
-                <p style={{ color: color }} className="text-sm font-semibold">
-                  {title}
-                </p>
-                <p className="text-lg font-semibold text-[#222E48]">{number}</p>
-                <p className="text-sm font-semibold text-[#222E4880]">{info}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div className="mt-[60px]">
           <Title>Recent Activity</Title>

@@ -9,6 +9,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.full-border-gradient {
+    background:
+        radial-gradient(var(--border-color1)),
+        radial-gradient(var(--border-color2));
+
+}
 
 .custom-list {
     list-style: none;
