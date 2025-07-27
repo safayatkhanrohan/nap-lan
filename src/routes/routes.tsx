@@ -1,11 +1,14 @@
+import { createBrowserRouter } from 'react-router';
+import Dashboard from '../dashboard/pages/Dashboard';
+import Test from '../dashboard/pages/Test';
+import DashboardLayout from "../layout/DashboardLayout";
 import Main from "../layout/Main";
-import Home from "../pages/homepage";
-import { createBrowserRouter} from 'react-router'
-import HowItWorks from "../pages/how-it-works";
-import ForSchool from "../pages/For school";
-import PricingPlan from "../pages/pricing-plan";
 import FAQ from "../pages/FAQ";
+import ForSchool from "../pages/For school";
+import Home from "../pages/homepage";
+import HowItWorks from "../pages/how-it-works";
 import Login from "../pages/login";
+import PricingPlan from "../pages/pricing-plan";
 import Register from "../pages/register";
 
 const router = createBrowserRouter([
@@ -43,6 +46,20 @@ const router = createBrowserRouter([
             },
           ]
      },
+     {
+        path:'/dashboard',
+        element:<DashboardLayout/>,
+        children:[
+            {
+                path:'/dashboard',
+                element:<Dashboard/>, 
+            },
+            {
+                path:'/dashboard/test',
+                element:<Test/>, 
+            },
+        ]
+     }
 ]);
 
 export default router;
