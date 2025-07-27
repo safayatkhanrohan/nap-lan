@@ -132,10 +132,10 @@ const Hero = () => {
 
                {/* Right Section */}
                <motion.div
-                    className="flex items-center justify-center md:justify-end order-1 md:order-2 relative border"
+                    className="flex items-center justify-center md:justify-end order-1 md:order-2 relative"
                     variants={imageVariants}
                >
-                    <div className="w-full max-w-[630px] relative flex justify-center items-center border">
+                    <div className="w-full max-w-[630px] relative flex justify-center items-center">
                          <img
                               src="/images/hero-img.webp"
                               alt="Happy student learning"
