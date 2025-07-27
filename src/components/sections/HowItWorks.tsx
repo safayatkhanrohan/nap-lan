@@ -42,7 +42,7 @@ const HowItWorks = () => {
                imageSrc: "/images/howitworks/1.png",
                imgBg: "bg-[#A15BA8]",
                btnCls: "bg-[#E6700B]",
-               position: "xl:mt-[185px] -ml-[30px]"
+               position: "lg:mt-[175px] xl:mt-[166px] lg:-ml-[30px]"
           },
           {
                id: 2,
@@ -51,7 +51,7 @@ const HowItWorks = () => {
                imageSrc: "/images/howitworks/2.png",
                imgBg: "bg-[#23D581]",
                btnVariant: "blue",
-               position: "xl:mt-[148px] md:-ml-[30px]"
+               position: "lg:mt-[153px] xl:mt-[122px] lg:-ml-[30px]"
           },
           {
                id: 3,
@@ -61,7 +61,7 @@ const HowItWorks = () => {
                imgBg: "bg-[#E6700B]",
                btnVariant: "yellow",
                btnCls: "bg-[#F0C20A]",
-               position: "xl:mt-[228px] md:-ml-[30px]"
+               position: "xl:mt-[218px] lg:mt-[228px] lg:-ml-[30px]"
           },
           {
                id: 4,
@@ -71,7 +71,7 @@ const HowItWorks = () => {
                imgBg: "bg-[#8056FF]",
                btnVariant: "red",
                btnCls: "bg-[#FF7777]",
-               position: "xl:mt-[48px] md:-ml-[30px]"
+               position: "xl:mt-[60px] lg:mt-[90px] lg:-ml-[30px]"
           },
      ];
 
@@ -103,11 +103,11 @@ const HowItWorks = () => {
                     </motion.p>
 
                     <motion.div
-                         className="flex flex-col md:flex-row gap-8 md:justify-between"
+                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-6 mt-10"
                          variants={containerVariants}
                     >
                          {steps.map((step) => (
-                              <motion.div key={step.id} variants={itemVariants} className="w-full md:w-[250px]">
+                              <motion.div key={step.id} variants={itemVariants} className="w-full lg:w-[250px]">
                                    <HIWCard
                                         title={step.title}
                                         description={step.description}
@@ -124,7 +124,7 @@ const HowItWorks = () => {
                <img
                     src="/images/howitworks/line.png"
                     alt="Line"
-                    className="absolute bottom-0 left-0 w-full -z-5"
+                    className="absolute bottom-0 left-0 w-full -z-5 hidden lg:block"
                />
           </div>
      );
